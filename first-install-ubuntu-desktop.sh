@@ -29,7 +29,7 @@ then
 fi
 
 
-if [ "$osName" == "Ubuntu" ]
+if [ TRUE ]
 then
   echo "${green}  You're running $osName. We will begin applying updates, and securing the system.
 
