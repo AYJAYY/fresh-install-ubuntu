@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#__author__ = "Andrew Bullock"
+#__creationdate__ = "2024"
+#__license__ = "MIT"
+#__version__ = "0.0.1"
+#__maintainer__ = "Andrew Bullock"
+#__email__ = "bullockdev@proton.me"
+#__status__ = "Development"
+
 # Defining Colors for text output
 red=$( tput setaf 1 );
 yellow=$( tput setaf 3 );
