@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eou pipefail
 
 ##############################################
 #      File: Fresh Install Ubuntu Script     #
