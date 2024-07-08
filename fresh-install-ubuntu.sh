@@ -267,6 +267,7 @@ sleep 2
 
 #reload bash bro
 source ~/.bashrc
+sleep 2
 
 #Explain what was done
 echo "${green}
