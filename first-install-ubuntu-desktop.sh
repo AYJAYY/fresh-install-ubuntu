@@ -212,6 +212,17 @@ sudo echo "alias yta-vorbis='yt-dlp --extract-audio --audio-format vorbis '" >> 
 sudo echo "alias yta-wav='yt-dlp --extract-audio --audio-format wav '" >> ~/.bash_aliases
 sudo echo "alias ytv-best='yt-dlp -f bestvideo+bestaudio '" >> ~/.bash_aliases
 
+sudo echo "" >> ~/.bash_aliases
+sudo echo "# GIT" >> ~/.bash_aliases
+sudo echo "alias gs='git status'" >> ~/.bash_aliases
+sudo echo "alias ga='git add'" >> ~/.bash_aliases
+sudo echo "alias gaa='git add --all'" >> ~/.bash_aliases
+sudo echo "alias gp='git push'" >> ~/.bash_aliases
+sudo echo "alias gc='git commit'" >> ~/.bash_aliases
+sudo echo "# Create a new Git branch and move to the new branch at the same time" >> ~/.bash_aliases
+sudo echo "alias gb='git checkout -b'" >> ~/.bash_aliases
+sudo echo "alias gd='git diff'" >> ~/.bash_aliases
+
 sudo echo "" >> ~/.bashrc
 sudo echo "# Add fastfetch to bash start" >> ~/.bashrc
 sudo echo "fastfetch" >> ~/.bashrc
