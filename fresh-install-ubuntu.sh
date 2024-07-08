@@ -94,7 +94,10 @@ ${normal}"
 #Pausing so user can see output
 sleep 2
 
-echo "${yellow}  Securing SSH Config.
+echo "${yellow}
+##############################################
+#            SSH Config Section              #
+##############################################
 ${normal}"
 
 sudo echo "DisableForwarding yes
@@ -114,7 +117,10 @@ ${normal}"
 sleep 2
 
 # Enabling ufw firewall and making sure it allows SSH
-echo "${yellow}  Enabling ufw firewall. Ensuring SSH is allowed.
+echo "${yellow}
+##############################################
+#           UFW/fail2ban Section             #
+##############################################
 ${normal}"
 sudo ufw allow http
 sudo ufw allow ssh
@@ -163,14 +169,6 @@ ${normal}"
 sudo systemctl restart fail2ban
 echo "${green}
 fail2ban Restarted
-${normal}"
-
-# Tell the user what the fail2ban protections are set to
-echo "${green}
-fail2ban is now protecting SSH with the following settings:
-maxretry: 5
-findtime: 12 hours (43200 seconds)
-bantime: 24 hours (86400 seconds)
 ${normal}"
 # Pausing so user can see output
 sleep 2
