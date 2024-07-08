@@ -97,10 +97,21 @@ sleep 2
 
 echo "${yellow}  Securing SSH Config.
 ${normal}"
-sudo echo "DisableForwarding yes" >>/etc/ssh/sshd_config.d/10-my-sshd-settings.conf
-sudo echo "PermitRootLogin no" >>/etc/ssh/sshd_config.d/10-my-sshd-settings.conf
-sudo echo "IgnoreRhosts yes" >>/etc/ssh/sshd_config.d/10-my-sshd-settings.conf
-echo "${green}  Completed Securing SSH Config.
+
+sudo echo "DisableForwarding yes
+PermitRootLogin no
+IgnoreRhosts yes" | sudo tee /etc/ssh/sshd_config.d/fresh-install.conf
+
+echo "${yellow}
+Reloading SSH.
+${normal}"
+# Restarting ssh daemon
+sudo systemctl reload ssh
+echo "${green}
+SSH has been restarted.
+Completed Securing SSH Config.
+# Pause so user can see output
+sleep 1
 ${normal}"
 #Pausing so user can see output
 sleep 2
