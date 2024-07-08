@@ -61,7 +61,7 @@ echo "${yellow}
 #      Update, Install & Secure Section      #
 ##############################################
 ${normal}"
-sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
+sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo snap refresh
 sudo apt-get -y install sysstat vnstat iotop iftop bwm-ng htop munin git-all flatpak curl ssh cockpit unrar p7zip-full p7zip-rar python3 python3-pip ecryptfs-utils nmap gparted libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev build-essential
 sudo snap install yt-dlp
 
@@ -180,7 +180,7 @@ echo "Added PLEASE! sudo Alias"
 
 sudo echo "" >>~/.bash_aliases
 sudo echo "# Updater & Cleaner" >>~/.bash_aliases
-sudo echo "alias updater='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade'" >>~/.bash_aliases
+sudo echo "alias updater='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo snap refresh'" >>~/.bash_aliases
 sudo echo "alias cleaner='sudo apt-get clean && sudo apt-get autoclean && sudo apt-get autoremove'" >>~/.bash_aliases
 echo "Added Updater & Cleaner Aliases"
 
