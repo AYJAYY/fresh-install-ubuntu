@@ -187,18 +187,20 @@ ${normal}"
 touch ~/.bash_aliases
 sudo echo "# PLEASE!" >>~/.bash_aliases
 sudo echo "alias please='sudo'" >>~/.bash_aliases
-echo "Added PLEASE! sudo Alias"
+echo "${green}  Added PLEASE! sudo Alias
+${normal}"
 
 sudo echo "" >>~/.bash_aliases
 sudo echo "# Updater & Cleaner" >>~/.bash_aliases
 sudo echo "alias updater='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo snap refresh'" >>~/.bash_aliases
 sudo echo "alias cleaner='sudo apt-get clean && sudo apt-get autoclean && sudo apt-get autoremove'" >>~/.bash_aliases
-echo "Added updater & cleaner Aliases"
+echo "${green}  Added updater & cleaner Aliases"
 
 sudo echo "" >>~/.bash_aliases
 sudo echo "# fastfetch" >>~/.bash_aliases
 sudo echo "alias ff='fastfetch'" >>~/.bash_aliases
-echo "Added fastfetch Alias"
+echo "${green}  Added fastfetch Alias
+${normal}"
 
 sudo echo "" >>~/.bash_aliases
 sudo echo "# QOL" >>~/.bash_aliases
@@ -213,23 +215,27 @@ sudo echo "alias systemctl='sudo systemctl'" >>~/.bash_aliases
 sudo echo "alias home='cd ~'" >>~/.bash_aliases
 sudo echo "alias untar='tar -xvf'" >>~/.bash_aliases
 sudo echo "alias mktar='tar -cvf'" >>~/.bash_aliases
-echo "Added QOL Aliases"
+echo "${green}  Added QOL Aliases
+${normal}"
 
 sudo echo "" >>~/.bash_aliases
 sudo echo "# Remove a directory and all files" >>~/.bash_aliases
 sudo echo "alias rmd='rm  --recursive --force --verbose '" >>~/.bash_aliases
-echo "Added rmd (Remove Directory & Files) Alias"
+echo "${green}  Added rmd (Remove Directory & Files) Alias
+${normal}"
 
 sudo echo "" >>~/.bash_aliases
 sudo echo "#Edit this file" >>~/.bash_aliases
 sudo echo "alias ba='nano ~/.bash_aliases'" >>~/.bash_aliases
-echo "Added ba Alias (edit bash_aliases file)"
+echo "${green}  Added ba Alias (edit bash_aliases file)
+${normal}"
 
 sudo echo "" >>~/.bash_aliases
 sudo echo "# Alias's for safe and forced reboots" >>~/.bash_aliases
 sudo echo "alias rebootsafe='sudo shutdown -r now'" >>~/.bash_aliases
 sudo echo "alias rebootforce='sudo shutdown -r -n now'" >>~/.bash_aliases
-echo "Added Reboot Aliases"
+echo "${green}  Added Reboot Aliases
+${normal}"
 
 sudo echo "" >>~/.bash_aliases
 sudo echo "# youtube-dl" >>~/.bash_aliases
@@ -242,7 +248,8 @@ sudo echo "alias yta-opus='yt-dlp --extract-audio --audio-format opus '" >>~/.ba
 sudo echo "alias yta-vorbis='yt-dlp --extract-audio --audio-format vorbis '" >>~/.bash_aliases
 sudo echo "alias yta-wav='yt-dlp --extract-audio --audio-format wav '" >>~/.bash_aliases
 sudo echo "alias ytv-best='yt-dlp -f bestvideo bestaudio '" >>~/.bash_aliases
-echo "Added yt-dlp Aliases"
+echo "${green}  Added yt-dlp Aliases
+${normal}"
 
 sudo echo "" >>~/.bash_aliases
 sudo echo "# GIT" >>~/.bash_aliases
@@ -253,12 +260,14 @@ sudo echo "alias gp='git push'" >>~/.bash_aliases
 sudo echo "alias gc='git commit'" >>~/.bash_aliases
 sudo echo "alias gb='git checkout -b' # Create a new Git branch and move to the new branch at the same time" >>~/.bash_aliases
 sudo echo "alias gd='git diff'" >>~/.bash_aliases
-echo "Added Git Aliases"
+echo "${green}  Added Git Aliases
+${normal}"
 
 sudo echo "" >>~/.bashrc
 sudo echo "# Add fastfetch to bash start" >>~/.bashrc
 sudo echo "fastfetch" >>~/.bashrc
-echo "Added fastfetch to bash start"
+echo "${green}  Added fastfetch to bash start
+${normal}"
 
 echo "${green}  Completed Creating Aliases.
 ${normal}"
