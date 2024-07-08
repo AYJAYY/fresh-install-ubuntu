@@ -18,14 +18,6 @@ normal=$(tput sgr 0)
 
 osName=$(cat /etc/*os-release | grep ^NAME | cut -d '"' -f 2)
 
-echo "${red}
-THIS IS ONLY TO BE USED WITH UBUNTU!
-Please Ctrl-C if you are not on Ubuntu, Edubuntu, Kubuntu, Lubuntu, Ubuntu Studio, or Xubuntu.
-YMMV with other derivatives.
-${normal}"
-#Pause so user can see output
-sleep 5
-
 # Checking if running as root. If yes, asking to change to a non-root user.
 # This verifies that a non-root user is configured and is being used to run
 # the script.
@@ -43,6 +35,14 @@ if [ ${UID} == 0 ]; then
   sleep 2
   exit
 fi
+
+echo "${red}
+THIS IS ONLY TO BE USED WITH UBUNTU!
+Please Ctrl-C if you are not on Ubuntu, Edubuntu, Kubuntu, Lubuntu, Ubuntu Studio, or Xubuntu.
+YMMV with other derivatives.
+${normal}"
+#Pause so user can see output
+sleep 5
 
 echo "${green} 
 You're running $osName.
