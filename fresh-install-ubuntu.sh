@@ -62,7 +62,7 @@ ${normal}
 
 echo "${yellow}  
 ##############################################
-#      Update, Install & Secure Section      #
+#      Update, Install, & Secure Section     #
 ##############################################
 ${normal}"
 sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo snap refresh
