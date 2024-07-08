@@ -7,4 +7,4 @@
 - `chmod +x ./fresh-install-ubuntu.sh`
 - `./fresh-install-ubuntu.sh`
 
-FORK - https://github.com/TedLeRoy/first-ten-seconds-redhat-ubuntu
+Based on - https://github.com/TedLeRoy/first-ten-seconds-redhat-ubuntu
