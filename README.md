@@ -4,8 +4,9 @@
 
 [![version](https://img.shields.io/badge/version-v0.0.2-orange)](https://github.com/AYJAYY/fresh-install-ubuntu) [![license](https://img.shields.io/badge/license-GPLv3-blue)](https://github.com/AYJAYY/fresh-install-ubuntu)
 
-
 "Top things you need to do after installing Ubuntu Server!" - All in one script! - MUST HAVE!
+
+**NOTE:** This should only be run on a clean install, and should only be run once.
 
 **Inspired By:** The thousands of blog posts that come around each release cycle of Ubuntu on things to do on a fresh install. 
   **Examples:** [Tutorials Point Article](https://www.tutorialspoint.com/20-things-to-do-after-installing-ubuntu-22-04-lts-focal-fossa) | [Steemit Article](https://steemit.com/utopian-io/@jamzed/9-things-i-do-after-installing-a-fresh-linux-server-ubuntu)
