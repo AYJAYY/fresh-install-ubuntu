@@ -1,12 +1,16 @@
 #!/bin/bash
 
-#__author__ = "Andrew Bullock"
-#__creationdate__ = "2024"
-#__license__ = "MIT"
-#__version__ = "0.0.1"
-#__maintainer__ = "Andrew Bullock"
-#__email__ = "bullockdev@proton.me"
-#__status__ = "Development"
+
+##############################################
+#        File: Fresh Install Ubuntu Script   #
+#        Author: AYJAYY                      #
+#        Creation Date: 7/7/2024             #
+#        License: MIT                        #
+#        Version: 0.0.1                      #
+#        Contact: bullockdev@proton.me       #
+#        Status: Development                 #
+##############################################
+
 
 # Defining Colors for text output
 red=$( tput setaf 1 );
