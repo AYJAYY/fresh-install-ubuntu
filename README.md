@@ -7,7 +7,7 @@
 ## Usage
 - `bash <(curl -s https://raw.githubusercontent.com/AYJAYY/fresh-install-ubuntu/main/fresh-install-ubuntu.sh)`
   
-OR
+**OR**
 
 - `wget https://raw.githubusercontent.com/AYJAYY/fresh-install-ubuntu/main/fresh-install-ubuntu.sh`
 - `chmod +x ./fresh-install-ubuntu.sh`
