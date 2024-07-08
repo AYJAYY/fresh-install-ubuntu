@@ -279,6 +279,7 @@ sleep 2
 
 #reload bash bro
 source ~/.bashrc
+source ~/.bash_aliases
 sleep 2
 
 #Explain what was done
