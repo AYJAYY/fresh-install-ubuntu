@@ -32,7 +32,7 @@ then
   exit
 fi
 
-echo "${green}  You're running $osName. We will begin applying updates, and securing the system.
+echo "${green} You're running $osName. We will begin applying updates, and securing the system.
 
 You will be prompted for your sudo password.
 Please enter it when asked.
@@ -45,7 +45,7 @@ ${normal}
 echo "${yellow}  Running Updates & Installs.
 ${normal}"
 sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
-sudo apt-get -y install sysstat vnstat iotop iftop bwm-ng htop munin flatpak curl ssh cockpit
+sudo apt-get -y install sysstat vnstat iotop iftop bwm-ng htop munin flatpak curl ssh cockpit unrar p7zip-full p7zip-rar
 sudo snap install yt-dlp
 
 #apt-fast isn't in ubuntu reps, add it here
@@ -131,6 +131,8 @@ sudo echo "alias yta-vorbis='yt-dlp --extract-audio --audio-format vorbis '" >> 
 sudo echo "alias yta-wav='yt-dlp --extract-audio --audio-format wav '" >> ~/.bash_aliases
 sudo echo "alias ytv-best='yt-dlp -f bestvideo+bestaudio '" >> ~/.bash_aliases
 
+sudo echo "" >> ~/.bashrc
+sudo echo "# Add fastfetch to bash start" >> ~/.bashrc
 sudo echo "fastfetch" >> ~/.bashrc
 
 echo "${green}  Completed Creating Aliases.
