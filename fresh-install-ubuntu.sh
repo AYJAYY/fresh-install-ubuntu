@@ -52,10 +52,10 @@ Please enter it when asked.
 ${normal}
 "
 
+echo "${yellow}  
 ##############################################
 #      Update, Install & Secure Section      #
 ##############################################
-echo "${yellow}  Running Updates, Installs, & Securing System.
 ${normal}"
 sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
 sudo apt-get -y install sysstat vnstat iotop iftop bwm-ng htop munin git-all flatpak curl ssh cockpit unrar p7zip-full p7zip-rar python3 python3-pip ecryptfs-utils nmap gparted libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev build-essential
@@ -167,11 +167,11 @@ ${normal}"
 #Pausing so user can see output
 sleep 2
 
-##############################################
-#           .bash_aliases Section            #
-##############################################
 
-echo "${yellow}  Creating Aliases.
+echo "${yellow}  
+##############################################
+#      .bash_aliases & .bashrc Section       #
+##############################################
 ${normal}"
 touch ~/.bash_aliases
 sudo echo "# PLEASE!" >> ~/.bash_aliases
@@ -244,10 +244,11 @@ ${normal}"
 #Pausing so user can see output
 sleep 2
 
+
+echo "${yellow}  
 ##############################################
-#              Overview Section              #
+#                  Cleanup                   #
 ##############################################
-echo "${yellow}  Cleaning Up.
 ${normal}"
 sudo apt-get -y autoclean && sudo apt-get -y clean
 echo "${green}  Cleaned!.
@@ -257,10 +258,12 @@ sleep 2
 
 #reload bash bro
 source ~/.bashrc
-source ~./bash_aliases
 
 #Explain what was done
 echo "${green}
+##############################################
+#                  Overview                  #
+##############################################
 Description of what was done:
 1. Ensured a non-root user is set up.
 2. Ensured non-root user also has sudo permission.
