@@ -128,10 +128,6 @@ sudo echo "alias ytv-best='yt-dlp -f bestvideo+bestaudio '" >> ~/.bash_aliases
 
 sudo echo "fastfetch" >> ~/.bashrc
 
-#reload bash bro
-source ~/.bashrc
-source ~./bash_aliases
-
 echo "${green}  Completed Creating Aliases.
 ${normal}"
 #Pausing so user can see output
@@ -220,6 +216,10 @@ ${normal}"
 #Pausing so user can see output
 sleep 2
 
+#reload bash bro
+source ~/.bashrc
+source ~./bash_aliases
+
 #Explain what was done
 echo "${green}
 Description of what was done:
@@ -235,3 +235,5 @@ Description of what was done:
    d. Ignoring rhosts
 7. Installed fail2ban and configured it to protect SSH.
 ${normal}"
+
+
