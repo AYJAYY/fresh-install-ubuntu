@@ -45,10 +45,10 @@ ${normal}
 echo "${yellow}  Running Updates.
 ${normal}"
 sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
-sudo apt-get -y install sysstat vnstat iotop iftop bwm-ng htop munin flatpak curl ssh
+sudo apt-get -y install sysstat vnstat iotop iftop bwm-ng htop munin flatpak curl ssh yt-dlp
 sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
 sudo apt-get upgrade
-sudo apt-get install fastfetch
+sudo apt-get -y install fastfetch
 
 echo "${green}  Completed Updates & Installs.
 ${normal}"
@@ -70,9 +70,10 @@ sleep 2
 #              .bashrc Section               #
 ##############################################
 
-echo "${yellow}  Creating Aliases & ~/.bashrc
+echo "${yellow}  Creating Aliases.
 ${normal}"
 sudo echo "alias updater='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade'" >> ~/.bashrc
+sudo echo "alias cleaner='sudo apt-get clean && sudo apt-get autoclean && sudo apt-get autoremove'" >> ~/.bashrc
 sudo echo "alias ff='fastfetch'" >> ~/.bashrc
 sudo echo "alias cd..='cd ..'" >> ~/.bashrc
 sudo echo "alias grep='grep --color=auto'" >> ~/.bashrc
@@ -81,6 +82,32 @@ sudo echo "alias chown='chown --preserve-root'" >> ~/.bashrc
 sudo echo "alias chmod='chmod --preserve-root'" >> ~/.bashrc
 sudo echo "alias chgrp='chgrp --preserve-root'" >> ~/.bashrc
 sudo echo "alias wget='wget -c'" >> ~/.bashrc
+sudo echo "alias systemctl='sudo systemctl'" >> ~/.bashrc
+sudo echo "alias home='cd ~'" >> ~/.bashrc
+sudo echo "alias untar='tar -xvf'" >> ~/.bashrc
+
+sudo echo "# Remove a directory and all files" >> ~/.bashrc
+sudo echo "alias rmd='rm  --recursive --force --verbose '" >> ~/.bashrc
+
+sudo echo "#Edit this file" >> ~/.bashrc
+sudo echo "alias ba='nano ~/.bash_aliases'" >> ~/.bashrc
+
+
+sudo echo "# youtube-dl" >> ~/.bashrc
+sudo echo "alias yta-aac='yt-dlp --extract-audio --audio-format aac '" >> ~/.bashrc
+sudo echo "alias yta-best='yt-dlp --extract-audio --audio-format best '" >> ~/.bashrc
+sudo echo "alias yta-flac='yt-dlp --extract-audio --audio-format flac '" >> ~/.bashrc
+sudo echo "alias yta-m4a='yt-dlp --extract-audio --audio-format m4a '" >> ~/.bashrc
+sudo echo "alias yta-mp3='yt-dlp --extract-audio --audio-format mp3 '" >> ~/.bashrc
+sudo echo "alias yta-opus='yt-dlp --extract-audio --audio-format opus '" >> ~/.bashrc
+sudo echo "alias yta-vorbis='yt-dlp --extract-audio --audio-format vorbis '" >> ~/.bashrc
+sudo echo "alias yta-wav='yt-dlp --extract-audio --audio-format wav '" >> ~/.bashrc
+sudo echo "alias ytv-best='yt-dlp -f bestvideo+bestaudio '" >> ~/.bashrc
+
+
+
+
+
 
 echo "${green}  Completed Creating Aliases.
 ${normal}"
