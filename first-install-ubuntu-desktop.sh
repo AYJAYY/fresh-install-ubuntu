@@ -45,7 +45,11 @@ then
   ${normal}"
   sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
   sudo apt-get -y install sysstat vnstat iotop iftop bwm-ng htop munin flatpak curl ssh
-  echo "${green}  Completed Updates.
+  sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
+  sudo apt-get upgrade
+  sudo apt-get install fastfetch
+  
+  echo "${green}  Completed Updates & Installs.
   ${normal}"
   #Pausing so user can see output
   sleep 1
@@ -63,6 +67,8 @@ then
   echo "${yellow}  Creating Aliases.
   ${normal}"
   sudo echo "alias updater='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade'" >> ~/.bashrc
+  sudo echo "alias ff='fastfetch'" >> ~/.bashrc
+  
   echo "${green}  Completed Creating Aliases.
   ${normal}"
   #Pausing so user can see output
@@ -74,6 +80,7 @@ then
   # Enabling ufw firewall and making sure it allows SSH
   echo "${yellow}  Enabling ufw firewall. Ensuring SSH is allowed.
   ${normal}"
+  sudo ufw allow http
   sudo ufw allow ssh
   sudo ufw --force enable
   echo "${green}
