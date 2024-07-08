@@ -9,8 +9,9 @@
 
 **Inspired By:**
 
-**Quick Method**
+
 ## Usage
+**Quick Method**
 - `bash <(curl -s https://raw.githubusercontent.com/AYJAYY/fresh-install-ubuntu/main/fresh-install-ubuntu.sh)`[^1]
 
 **Alternative Method**
