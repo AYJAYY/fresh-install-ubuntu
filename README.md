@@ -9,4 +9,6 @@
 - `chmod +x ./fresh-install-ubuntu.sh`
 - `./fresh-install-ubuntu.sh`
 
+# UNDER CONSTRUCTION
+
 Based on - https://github.com/TedLeRoy/first-ten-seconds-redhat-ubuntu
