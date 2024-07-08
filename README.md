@@ -10,9 +10,9 @@
 **Inspired By:**
 
 ## Usage
-- `bash <(curl -s https://raw.githubusercontent.com/AYJAYY/fresh-install-ubuntu/main/fresh-install-ubuntu.sh)`
-  
-**OR**
+- `bash <(curl -s https://raw.githubusercontent.com/AYJAYY/fresh-install-ubuntu/main/fresh-install-ubuntu.sh)`[^1]
+
+**Alternative Method**
 
 - `wget https://raw.githubusercontent.com/AYJAYY/fresh-install-ubuntu/main/fresh-install-ubuntu.sh`
 - `chmod +x ./fresh-install-ubuntu.sh`
@@ -20,3 +20,5 @@
   - `./fresh-install-ubuntu.sh`
 
 Based on - https://github.com/TedLeRoy/first-ten-seconds-redhat-ubuntu
+
+[^1]: Given that many individuals hesitate to curl content straight into bash, we advise utilizing the alternative method and inspecting the source code to validate the commands being executed.
