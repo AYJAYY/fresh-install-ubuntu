@@ -34,11 +34,13 @@ sleep 5
 if [ ${UID} == 0  ]
 then
   echo "${red}
-  You're running this script as root user.
-  Please configure a non-root user and run this
-  script as that non-root user.
-  Please do not start the script using sudo, but
-  enter sudo privileges when prompted.
+  ##############################################
+  #      You're running this script as a       #
+  #      root user. Please create a non-root   #
+  #      user and run this script as that      #
+  #      non-root user. Please do not start    #
+  #      the script using sudo.                #
+  ##############################################
   ${normal}"
   #Pause so user can see output
   sleep 2
