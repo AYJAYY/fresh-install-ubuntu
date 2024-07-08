@@ -10,6 +10,17 @@
 ## Overview
 This Bash script is designed for a fresh Ubuntu installation. It automates various system setup tasks, including updates, software installations, security configurations, and user environment customizations.
 
+## Usage
+**Quick Method**
+- `bash <(curl -s https://raw.githubusercontent.com/AYJAYY/fresh-install-ubuntu/main/fresh-install-ubuntu.sh)`[^1]
+
+**Alternative Method**
+
+- `wget https://raw.githubusercontent.com/AYJAYY/fresh-install-ubuntu/main/fresh-install-ubuntu.sh`
+- `chmod +x ./fresh-install-ubuntu.sh`
+- Run as non-root user
+  - `./fresh-install-ubuntu.sh`
+
 ## Key Components
 
 ### Initial Checks
@@ -63,18 +74,9 @@ This Bash script is designed for a fresh Ubuntu installation. It automates vario
 
 **Inspired By:** The thousands of blog posts that come around each release cycle of Ubuntu on things to do on a fresh install. 
   **Examples:** [Tutorials Point Article](https://www.tutorialspoint.com/20-things-to-do-after-installing-ubuntu-22-04-lts-focal-fossa) | [Steemit Article](https://steemit.com/utopian-io/@jamzed/9-things-i-do-after-installing-a-fresh-linux-server-ubuntu)
-
-## Usage
-**Quick Method**
-- `bash <(curl -s https://raw.githubusercontent.com/AYJAYY/fresh-install-ubuntu/main/fresh-install-ubuntu.sh)`[^1]
-
-**Alternative Method**
-
-- `wget https://raw.githubusercontent.com/AYJAYY/fresh-install-ubuntu/main/fresh-install-ubuntu.sh`
-- `chmod +x ./fresh-install-ubuntu.sh`
-- Run as non-root user
-  - `./fresh-install-ubuntu.sh`
-
+  
 Based on the legendary - [First Ten Seconds by TedLeRoy](https://github.com/TedLeRoy/first-ten-seconds-redhat-ubuntu)
+
+
 
 [^1]: Given that many individuals hesitate to curl content straight into bash, we advise utilizing the alternative method and inspecting the source code to validate the commands being executed.
