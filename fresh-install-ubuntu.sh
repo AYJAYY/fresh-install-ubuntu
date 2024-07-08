@@ -2,12 +2,13 @@
 
 
 ##############################################
-#        File: Fresh Install Ubuntu Script   #
-#        Author: AYJAYY                      #
-#        Creation Date: 7/7/2024             #
-#        License: MIT                        #
-#        Version: 0.0.1                      #
-#        Status: Development                 #
+#     File: Fresh Install Ubuntu Script      #
+#     Author: AYJAYY                         #
+#     Creation Date: 7/7/2024                #
+#     License: MIT                           #
+#     Version: 0.0.1                         #
+#     Status: Development                    #
+#     Fork: first-ten-seconds-redhat-ubuntu  #               #
 ##############################################
 
 
