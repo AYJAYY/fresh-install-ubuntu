@@ -28,7 +28,7 @@ then
   enter sudo privileges when prompted.
   ${normal}"
   #Pause so user can see output
-  sleep 1
+  sleep 2
   exit
 fi
 
@@ -56,7 +56,7 @@ sudo apt-get -y install fastfetch
 echo "${green}  Completed Updates & Installs.
 ${normal}"
 #Pausing so user can see output
-sleep 1
+sleep 2
 
 echo "${yellow}  Securing SSH Config.
 ${normal}"
@@ -96,10 +96,8 @@ sudo echo "alias wget='wget -c'" >> ~/.bash_aliases
 sudo echo "alias systemctl='sudo systemctl'" >> ~/.bash_aliases
 sudo echo "alias home='cd ~'" >> ~/.bash_aliases
 sudo echo "alias untar='tar -xvf'" >> ~/.bash_aliases
-
 sudo echo "# Remove a directory and all files" >> ~/.bash_aliases
 sudo echo "alias rmd='rm  --recursive --force --verbose '" >> ~/.bash_aliases
-
 sudo echo "#Edit this file" >> ~/.bash_aliases
 sudo echo "alias ba='nano ~/.bash_aliases'" >> ~/.bash_aliases
 
@@ -196,7 +194,7 @@ ${normal}"
 sleep 2
 
 ##############################################
-#           Ubuntu Overview Section          #
+#              Overview Section              #
 ##############################################
 echo "${yellow}  Cleaning Up.
 ${normal}"
@@ -204,13 +202,13 @@ sudo apt-get -y autoclean && sudo apt-get -y clean
 echo "${green}  Cleaned!.
 ${normal}"
 #Pausing so user can see output
-sleep 1
+sleep 2
 
 #Explain what was done
 echo "${green}
 Description of what was done:
 1. Ensured a non-root user is set up.
-2. Ensured non-root user also has sudo permission (script won't continue without it).
+2. Ensured non-root user also has sudo permission.
 3. Installed Updates, Aliases & Standard Software
 4. Ensured SSH is allowed.
 5. Ensured ufw firewall is enabled.
