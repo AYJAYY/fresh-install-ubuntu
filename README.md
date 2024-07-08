@@ -1,3 +1,5 @@
+# UNDER CONSTRUCTION
+
 # Fresh Install Script - Ubuntu - MUST HAVE
 
 ![https://github.com/AYJAYY/fresh-install-ubuntu](https://img.shields.io/badge/version-v0.0.1-orange)  ![https://github.com/AYJAYY/fresh-install-ubuntu](https://img.shields.io/badge/license-GPLv3-blue)
@@ -16,7 +18,5 @@
 - `chmod +x ./fresh-install-ubuntu.sh`
 - Run as non-root user
   - `./fresh-install-ubuntu.sh`
-
-# UNDER CONSTRUCTION
 
 Based on - https://github.com/TedLeRoy/first-ten-seconds-redhat-ubuntu
