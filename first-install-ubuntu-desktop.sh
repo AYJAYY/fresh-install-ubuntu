@@ -46,7 +46,7 @@ ${normal}
 echo "${yellow}  Running Updates & Installs.
 ${normal}"
 sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
-sudo apt-get -y install sysstat vnstat iotop iftop bwm-ng htop munin flatpak curl ssh cockpit unrar p7zip-full p7zip-rar
+sudo apt-get -y install sysstat vnstat iotop iftop bwm-ng htop munin flatpak curl ssh cockpit unrar p7zip-full p7zip-rar python3 python3-pip
 sudo snap install yt-dlp
 
 #apt-fast isn't in ubuntu reps, add it here
