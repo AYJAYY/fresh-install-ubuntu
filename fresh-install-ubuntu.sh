@@ -2,7 +2,7 @@
 set -eou pipefail
 
 ##############################################
-#      File: Fresh Install Ubuntu Script     #
+#      File: fresh-install-ubuntu.sh         #
 #      Author: AYJAYY                        #
 #      Creation Date: 7/7/2024               #
 #      License: GPL v3                       #
