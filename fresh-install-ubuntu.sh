@@ -109,8 +109,6 @@ sudo systemctl reload ssh
 echo "${green}
 SSH has been restarted.
 Completed Securing SSH Config.
-# Pause so user can see output
-sleep 1
 ${normal}"
 #Pausing so user can see output
 sleep 2
