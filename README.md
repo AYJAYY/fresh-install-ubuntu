@@ -2,7 +2,8 @@
 
 # Fresh Install Script - Ubuntu Server
 
-![https://github.com/AYJAYY/fresh-install-ubuntu](https://img.shields.io/badge/version-v0.0.1-orange)  ![https://github.com/AYJAYY/fresh-install-ubuntu](https://img.shields.io/badge/license-GPLv3-blue)
+[![version](https://img.shields.io/badge/version-v0.0.2-orange)](https://github.com/AYJAYY/fresh-install-ubuntu) [![license](https://img.shields.io/badge/license-GPLv3-blue)](https://github.com/AYJAYY/fresh-install-ubuntu)
+
 
 "Top things you need to do after installing Ubuntu Server!" - All in one script! - MUST HAVE!
 
