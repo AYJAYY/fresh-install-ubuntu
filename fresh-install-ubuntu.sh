@@ -5,6 +5,7 @@ set -eou pipefail
 #      File: fresh-install-ubuntu.sh         #
 #      Author: AYJAYY                        #
 #      Creation Date: 7/7/2024               #
+#      Modified Date: 7/8/2024               #
 #      License: GPL v3                       #
 #      Version: 0.0.1                        #
 #      Status: Development                   #
