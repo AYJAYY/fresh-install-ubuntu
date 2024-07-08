@@ -7,7 +7,8 @@
 ## Usage
 - `wget https://raw.githubusercontent.com/AYJAYY/fresh-install-ubuntu/main/fresh-install-ubuntu.sh`
 - `chmod +x ./fresh-install-ubuntu.sh`
-- `./fresh-install-ubuntu.sh`
+- Run as non-root user
+  - `./fresh-install-ubuntu.sh`
 
 # UNDER CONSTRUCTION
 
