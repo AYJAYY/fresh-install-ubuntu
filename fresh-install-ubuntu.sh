@@ -66,8 +66,7 @@ echo "${yellow}
 ##############################################
 ${normal}"
 sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo snap refresh
-sudo apt-get -y install sysstat vnstat iotop iftop bwm-ng htop munin git-all flatpak curl ssh cockpit unrar p7zip-full p7zip-rar python3 python3-pip ecryptfs-utils nmap gparted libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev build-essential
-sudo snap install yt-dlp
+sudo apt-get -y install yt-dlp sysstat vnstat iotop iftop bwm-ng htop munin git-all flatpak curl ssh cockpit unrar p7zip-full p7zip-rar python3 python3-pip ecryptfs-utils nmap gparted libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev build-essential
 
 #apt-fast isn't in ubuntu repos, add it here
 sudo add-apt-repository ppa:apt-fast/stable -y
@@ -85,9 +84,9 @@ read -p 'GitHub Username: ' gitUser
 echo "Please enter your GitHub email or press enter to continue."
 read -p 'GitHub Email: ' gitEmail
 
-if [ -n ${gitUser} ]; then
-  git config --global user.name $gitUser
-  git config --global user.email $gitEmail
+if [ -n "${gitUser}" ]; then
+  git config --global user.name "$gitUser"
+  git config --global user.email "$gitEmail"
 fi
 
 echo "${green}  Completed Updates & Installs.
