@@ -207,12 +207,12 @@ echo "Added QOL Aliases"
 sudo echo "" >> ~/.bash_aliases
 sudo echo "# Remove a directory and all files" >> ~/.bash_aliases
 sudo echo "alias rmd='rm  --recursive --force --verbose '" >> ~/.bash_aliases
-echo "Added rmd Alias"
+echo "Added rmd (Remove Directory & Files) Alias"
 
 sudo echo "" >> ~/.bash_aliases
 sudo echo "#Edit this file" >> ~/.bash_aliases
 sudo echo "alias ba='nano ~/.bash_aliases'" >> ~/.bash_aliases
-echo "Added edit this file Alias (ba)"
+echo "Added ba Alias (edit bash_aliases file)"
 
 sudo echo "" >> ~/.bash_aliases
 sudo echo "# Alias's for safe and forced reboots" >> ~/.bash_aliases
