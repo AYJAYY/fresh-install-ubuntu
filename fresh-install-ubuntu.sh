@@ -12,12 +12,12 @@ set -eou pipefail
 ##############################################
 
 # Defining Colors for text output
-red=$(tput setaf 1)
-yellow=$(tput setaf 3)
-green=$(tput setaf 2)
-normal=$(tput sgr 0)
+readonly red=$(tput setaf 1)
+readonly yellow=$(tput setaf 3)
+readonly green=$(tput setaf 2)
+readonly normal=$(tput sgr 0)
 
-osName=$(cat /etc/*os-release | grep ^NAME | cut -d '"' -f 2)
+readonly osName=$(cat /etc/*os-release | grep ^NAME | cut -d '"' -f 2)
 
 # Checking if running as root. If yes, asking to change to a non-root user.
 # This verifies that a non-root user is configured and is being used to run
