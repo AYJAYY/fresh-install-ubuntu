@@ -19,7 +19,7 @@ This Bash script is designed for a fresh Ubuntu installation. It automates vario
 ### System Updates and Software Installation
 - Performs system updates (apt-get update, upgrade, dist-upgrade, snap refresh)
 - Installs a variety of useful software packages
-  - yt-dlp,sysstat,vnstat,iotop,iftop,bwm-ng,htop,git-all,flatpak,curl,ssh,cockpit,unrar,p7zip-full,p7zip-rar,python3,python3-pip,ecryptfs-utils,nmap,gparted,libcurl4-gnutls-dev,libexpat1-dev,gettext,libz-dev,libssl-dev,build-essential
+  - yt-dlp,cointop,sysstat,speedtest-cli,vnstat,iotop,gping,iftop,bwm-ng,thefuck,htop,btop,googler,git-all,flatpak,curl,ssh,cockpit,unrar,p7zip-full,p7zip-rar,python3,python3-pip,ecryptfs-utils,nmap,gparted,libcurl4-gnutls-dev,libexpat1-dev,gettext,libz-dev,libssl-dev,build-essential
 - Adds and installs additional repositories (apt-fast, fastfetch)
 
 ### GitHub Configuration
