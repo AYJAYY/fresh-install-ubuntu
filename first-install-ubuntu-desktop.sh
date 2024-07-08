@@ -42,7 +42,7 @@ ${normal}
 ##############################################
 #      Update, Install & Secure Section      #
 ##############################################
-echo "${yellow}  Running Updates.
+echo "${yellow}  Running Updates & Installs.
 ${normal}"
 sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
 sudo apt-get -y install sysstat vnstat iotop iftop bwm-ng htop munin flatpak curl ssh cockpit
@@ -50,7 +50,7 @@ sudo snap install yt-dlp
 
 #fastfetch isn't in ubuntu reps, add it here
 sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
-sudo apt-get update && sudo apt-get -y upgrade
+sudo apt-get update
 sudo apt-get -y install fastfetch
 
 echo "${green}  Completed Updates & Installs.
