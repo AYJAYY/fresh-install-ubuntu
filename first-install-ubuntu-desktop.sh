@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# first install ubuntu desktop update, and protect.
-
 # Defining Colors for text output
 red=$( tput setaf 1 );
 yellow=$( tput setaf 3 );
@@ -10,10 +8,15 @@ normal=$( tput sgr 0 );
 
 osName=$( cat /etc/*os-release | grep ^NAME | cut -d '"' -f 2 );
 
+echo "${red}
+THIS IS ONLY TO BE USED WITH UBUNTU!
+${normal}"
+#Pause so user can see output
+sleep 2
+
 # Checking if running as root. If yes, asking to change to a non-root user.
 # This verifies that a non-root user is configured and is being used to run
 # the script.
-
 if [ ${UID} == 0  ]
 then
   echo "${red}
@@ -36,7 +39,7 @@ ${normal}
 "
 
 ##############################################
-#          Update & Secure Section           #
+#      Update, Install & Secure Section      #
 ##############################################
 echo "${yellow}  Running Updates.
 ${normal}"
@@ -59,17 +62,31 @@ sudo echo "IgnoreRhosts yes" >> /etc/ssh/sshd_config.d/10-my-sshd-settings.conf
 echo "${green}  Completed Securing SSH Config.
 ${normal}"
 #Pausing so user can see output
-sleep 1
+sleep 2
 
-echo "${yellow}  Creating Aliases.
+
+##############################################
+#              .bashrc Section               #
+##############################################
+
+echo "${yellow}  Creating Aliases & ~/.bashrc
 ${normal}"
 sudo echo "alias updater='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade'" >> ~/.bashrc
 sudo echo "alias ff='fastfetch'" >> ~/.bashrc
+sudo echo "alias cd..='cd ..'" >> ~/.bashrc
+sudo echo "alias grep='grep --color=auto'" >> ~/.bashrc
+sudo echo "alias rm='rm -I --preserve-root'" >> ~/.bashrc
+sudo echo "alias chown='chown --preserve-root'" >> ~/.bashrc
+sudo echo "alias chmod='chmod --preserve-root'" >> ~/.bashrc
+sudo echo "alias chgrp='chgrp --preserve-root'" >> ~/.bashrc
+sudo echo "alias wget='wget -c'" >> ~/.bashrc
 
 echo "${green}  Completed Creating Aliases.
 ${normal}"
 #Pausing so user can see output
-sleep 1
+sleep 2
+
+
 ##############################################
 #              Firewall Section              #
 ##############################################
@@ -79,15 +96,17 @@ echo "${yellow}  Enabling ufw firewall. Ensuring SSH is allowed.
 ${normal}"
 sudo ufw allow http
 sudo ufw allow ssh
+sudo ufw allow 9090
 sudo ufw --force enable
+
 echo "${green}
 Done configuring ufw firewall.
 ${normal}"
 #Pausing so user can see output
-sleep 1
+sleep 2
 
 
-  ##############################################
+##############################################
 #          Ubuntu fail2ban Section           #
 ##############################################
 
@@ -128,6 +147,7 @@ sudo systemctl restart fail2ban
 echo "${green}
 fail2ban restarted
 ${normal}"
+
 # Tell the user what the fail2ban protections are set to
 echo "${green}
 fail2ban is now protecting SSH with the following settings:
@@ -136,12 +156,11 @@ findtime: 12 hours (43200 seconds)
 bantime: 24 hours (86400 seconds)
 ${normal}"
 # Pausing so user can see output
-sleep 1
+sleep 2
 
-
-  ##############################################
-  #           Ubuntu Overview Section          #
-  ##############################################
+##############################################
+#           Ubuntu Overview Section          #
+##############################################
 echo "${yellow}  Cleaning Up.
 ${normal}"
 sudo apt-get -y autoclean && sudo apt-get -y clean
@@ -165,17 +184,3 @@ Description of what was done:
    d. Ignoring rhosts
 7. Installed fail2ban and configured it to protect SSH.
 ${normal}"
-
-
-
-####################################################
-#              If Ubuntu is not found              #
-####################################################
-
-else
-  echo "${red}
-  I'm not sure what operating system you're running.
-  This script has only been tested for Ubuntu.
-  Please run it only on Ubuntu Desktop Version.
-  ${normal}"
-fi
