@@ -285,7 +285,7 @@ ${normal}"
 #Pausing so user can see output
 sleep 2
 
-#reload bash bro
+#reload .bashrc and .bash_aliases
 source ~/.bashrc
 source ~/.bash_aliases
 sleep 2
