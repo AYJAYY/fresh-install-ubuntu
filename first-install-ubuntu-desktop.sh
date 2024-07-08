@@ -43,7 +43,7 @@ ${normal}
 ##############################################
 #      Update, Install & Secure Section      #
 ##############################################
-echo "${yellow}  Running Updates & Installs.
+echo "${yellow}  Running Updates, Installs, & Securing System.
 ${normal}"
 sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
 sudo apt-get -y install sysstat vnstat iotop iftop bwm-ng htop munin git-all flatpak curl ssh cockpit unrar p7zip-full p7zip-rar python3 python3-pip ecryptfs-utils nmap gparted libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev build-essential
@@ -60,10 +60,10 @@ sudo apt-get update
 sudo apt-get -y install fastfetch
 
 #lets setup github
-echo "Please enter your Github username or press enter to continue."
-read gituser
-echo "Please enter your Github email or press enter to continue."
-read gitemail
+echo "Please enter your GitHub username or press enter to continue."
+read -p 'GitHub Username: ' gituser
+echo "Please enter your GitHub email or press enter to continue."
+read -p 'GitHub Email: ' gitemail
 
 if [ $gituser ];
 then
@@ -88,6 +88,72 @@ ${normal}"
 #Pausing so user can see output
 sleep 2
 
+# Enabling ufw firewall and making sure it allows SSH
+echo "${yellow}  Enabling ufw firewall. Ensuring SSH is allowed.
+${normal}"
+sudo ufw allow http
+sudo ufw allow ssh
+sudo ufw allow 9090
+sudo ufw --force enable
+
+echo "${green}
+Done configuring ufw firewall.
+${normal}"
+#Pausing so user can see output
+sleep 2
+
+# Installing fail2ban and networking tools (includes netstat)
+echo "${yellow}
+Installing fail2ban and networking tools.
+${normal}"
+sudo apt install fail2ban net-tools -y
+echo "${green}
+fail2ban and networking tools have been installed.
+${normal}"
+# Setting up the fail2ban jail for SSH
+echo "${yellow}
+Configuring fail2ban to protect SSH.
+
+Entering the following into /etc/fail2ban/jail.local
+${normal}"
+echo "# Default banning action (e.g. iptables, iptables-new,
+# iptables-multiport, shorewall, etc) It is used to define
+# action_* variables. Can be overridden globally or per
+# section within jail.local file
+
+[ssh]
+
+enabled  = true
+banaction = iptables-multiport
+port     = ssh
+filter   = sshd
+logpath  = /var/log/auth.log
+maxretry = 5
+findtime = 43200
+bantime = 86400" | sudo tee /etc/fail2ban/jail.local
+# Restarting fail2ban
+echo "${green}
+Restarting fail2ban
+${normal}"
+sudo systemctl restart fail2ban
+echo "${green}
+fail2ban Restarted
+${normal}"
+
+# Tell the user what the fail2ban protections are set to
+echo "${green}
+fail2ban is now protecting SSH with the following settings:
+maxretry: 5
+findtime: 12 hours (43200 seconds)
+bantime: 24 hours (86400 seconds)
+${normal}"
+# Pausing so user can see output
+sleep 2
+
+echo "${green}  Completed Updates, Installs, & Secured System.
+${normal}"
+#Pausing so user can see output
+sleep 2
 
 ##############################################
 #           .bash_aliases Section            #
@@ -153,78 +219,6 @@ sudo echo "fastfetch" >> ~/.bashrc
 echo "${green}  Completed Creating Aliases.
 ${normal}"
 #Pausing so user can see output
-sleep 2
-
-
-##############################################
-#              Firewall Section              #
-##############################################
-
-# Enabling ufw firewall and making sure it allows SSH
-echo "${yellow}  Enabling ufw firewall. Ensuring SSH is allowed.
-${normal}"
-sudo ufw allow http
-sudo ufw allow ssh
-sudo ufw allow 9090
-sudo ufw --force enable
-
-echo "${green}
-Done configuring ufw firewall.
-${normal}"
-#Pausing so user can see output
-sleep 2
-
-
-##############################################
-#          Ubuntu fail2ban Section           #
-##############################################
-
-# Installing fail2ban and networking tools (includes netstat)
-echo "${yellow}
-Installing fail2ban and networking tools.
-${normal}"
-sudo apt install fail2ban net-tools -y
-echo "${green}
-fail2ban and networking tools have been installed.
-${normal}"
-# Setting up the fail2ban jail for SSH
-echo "${yellow}
-Configuring fail2ban to protect SSH.
-
-Entering the following into /etc/fail2ban/jail.local
-${normal}"
-echo "# Default banning action (e.g. iptables, iptables-new,
-# iptables-multiport, shorewall, etc) It is used to define
-# action_* variables. Can be overridden globally or per
-# section within jail.local file
-
-[ssh]
-
-enabled  = true
-banaction = iptables-multiport
-port     = ssh
-filter   = sshd
-logpath  = /var/log/auth.log
-maxretry = 5
-findtime = 43200
-bantime = 86400" | sudo tee /etc/fail2ban/jail.local
-# Restarting fail2ban
-echo "${green}
-Restarting fail2ban
-${normal}"
-sudo systemctl restart fail2ban
-echo "${green}
-fail2ban Restarted
-${normal}"
-
-# Tell the user what the fail2ban protections are set to
-echo "${green}
-fail2ban is now protecting SSH with the following settings:
-maxretry: 5
-findtime: 12 hours (43200 seconds)
-bantime: 24 hours (86400 seconds)
-${normal}"
-# Pausing so user can see output
 sleep 2
 
 ##############################################
