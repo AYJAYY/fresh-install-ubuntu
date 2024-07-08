@@ -4,6 +4,9 @@
 
 "Top things you need to do after installing Ubuntu Server!" - All in one script!
 
+
+**Inspired By:**
+
 ## Usage
 - `bash <(curl -s https://raw.githubusercontent.com/AYJAYY/fresh-install-ubuntu/main/fresh-install-ubuntu.sh)`
   
