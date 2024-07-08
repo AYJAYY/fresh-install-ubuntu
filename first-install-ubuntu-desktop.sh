@@ -78,16 +78,16 @@ ${normal}"
 sudo echo "# PLEASE!" >> ~/.bash_aliases
 sudo echo "alias please='sudo'" >> ~/.bash_aliases
 
-sudo echo "\n" >> ~/.bash_aliases
+sudo echo "" >> ~/.bash_aliases
 sudo echo "# Updater & Cleaner" >> ~/.bash_aliases
 sudo echo "alias updater='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade'" >> ~/.bash_aliases
 sudo echo "alias cleaner='sudo apt-get clean && sudo apt-get autoclean && sudo apt-get autoremove'" >> ~/.bash_aliases
 
-sudo echo "\n" >> ~/.bash_aliases
+sudo echo "" >> ~/.bash_aliases
 sudo echo "# fastfetch" >> ~/.bash_aliases
 sudo echo "alias ff='fastfetch'" >> ~/.bash_aliases
 
-sudo echo "\n" >> ~/.bash_aliases
+sudo echo "" >> ~/.bash_aliases
 sudo echo "# QOL" >> ~/.bash_aliases
 sudo echo "alias cd..='cd ..'" >> ~/.bash_aliases
 sudo echo "alias grep='grep --color=auto'" >> ~/.bash_aliases
@@ -101,20 +101,20 @@ sudo echo "alias home='cd ~'" >> ~/.bash_aliases
 sudo echo "alias untar='tar -xvf'" >> ~/.bash_aliases
 sudo echo "alias mktar='tar -cvf'" >> ~/.bash_aliases
 
-sudo echo "\n" >> ~/.bash_aliases
+sudo echo "" >> ~/.bash_aliases
 sudo echo "# Remove a directory and all files" >> ~/.bash_aliases
 sudo echo "alias rmd='rm  --recursive --force --verbose '" >> ~/.bash_aliases
 
-sudo echo "\n" >> ~/.bash_aliases
+sudo echo "" >> ~/.bash_aliases
 sudo echo "#Edit this file" >> ~/.bash_aliases
 sudo echo "alias ba='nano ~/.bash_aliases'" >> ~/.bash_aliases
 
-sudo echo "\n" >> ~/.bash_aliases
+sudo echo "" >> ~/.bash_aliases
 sudo echo "# Alias's for safe and forced reboots" >> ~/.bash_aliases
 sudo echo "alias rebootsafe='sudo shutdown -r now'" >> ~/.bash_aliases
 sudo echo "alias rebootforce='sudo shutdown -r -n now'" >> ~/.bash_aliases
 
-sudo echo "\n" >> ~/.bash_aliases
+sudo echo "" >> ~/.bash_aliases
 sudo echo "# youtube-dl" >> ~/.bash_aliases
 sudo echo "alias yta-aac='yt-dlp --extract-audio --audio-format aac '" >> ~/.bash_aliases
 sudo echo "alias yta-best='yt-dlp --extract-audio --audio-format best '" >> ~/.bash_aliases
