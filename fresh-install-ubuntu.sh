@@ -45,10 +45,15 @@ then
   exit
 fi
 
-echo "${green}  You're running $osName. We will begin applying updates, and securing the system.
-
-You will be prompted for your sudo password.
-Please enter it when asked.
+echo "${green}  
+##############################################
+#      You're running $osName.               #
+#      We will begin applying updates,       #
+#      and securing the system.              #
+##############################################
+#      You will be prompted for your         #
+#      sudo password.                        #
+##############################################
 ${normal}
 "
 
@@ -257,7 +262,7 @@ sleep 2
 
 echo "${yellow}  
 ##############################################
-#                  Cleanup                   #
+#              Cleanup Section               #
 ##############################################
 ${normal}"
 sudo apt-get -y autoclean && sudo apt-get -y clean
@@ -272,7 +277,7 @@ source ~/.bashrc
 #Explain what was done
 echo "${green}
 ##############################################
-#                  Overview                  #
+#               Overview Section             #
 ##############################################
 Description of what was done:
 1. Ensured a non-root user is set up.
