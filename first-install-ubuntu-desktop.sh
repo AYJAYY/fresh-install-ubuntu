@@ -10,9 +10,10 @@ osName=$( cat /etc/*os-release | grep ^NAME | cut -d '"' -f 2 );
 
 echo "${red}
 THIS IS ONLY TO BE USED WITH UBUNTU!
+Please Ctrl-C if you are not on Ubuntu, Edubuntu, Kubuntu, Lubuntu, Ubuntu Studio, or Xubuntu.
 ${normal}"
 #Pause so user can see output
-sleep 2
+sleep 5
 
 # Checking if running as root. If yes, asking to change to a non-root user.
 # This verifies that a non-root user is configured and is being used to run
