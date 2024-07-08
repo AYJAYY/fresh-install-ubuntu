@@ -11,6 +11,7 @@ osName=$( cat /etc/*os-release | grep ^NAME | cut -d '"' -f 2 );
 echo "${red}
 THIS IS ONLY TO BE USED WITH UBUNTU!
 Please Ctrl-C if you are not on Ubuntu, Edubuntu, Kubuntu, Lubuntu, Ubuntu Studio, or Xubuntu.
+YMMV with other derivatives.
 ${normal}"
 #Pause so user can see output
 sleep 5
