@@ -2,7 +2,7 @@
 
 ![https://github.com/AYJAYY/fresh-install-ubuntu](https://img.shields.io/badge/version-v0.0.1-orange)  ![https://github.com/AYJAYY/fresh-install-ubuntu](https://img.shields.io/badge/license-GPLv3-blue)
 
-"Top things you need to do after installing Ubuntu!" - All in one script!
+"Top things you need to do after installing Ubuntu Server!" - All in one script!
 
 ## Usage
 - `bash <(curl -s https://raw.githubusercontent.com/AYJAYY/fresh-install-ubuntu/main/fresh-install-ubuntu.sh)`
