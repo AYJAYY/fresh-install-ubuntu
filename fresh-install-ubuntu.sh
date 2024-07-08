@@ -7,7 +7,7 @@ set -eou pipefail
 #      Creation Date: 7/7/2024               #
 #      Modified Date: 7/8/2024               #
 #      License: GPL v3                       #
-#      Version: 0.0.1                        #
+#      Version: 0.0.2                        #
 #      Status: Development                   #
 #      Fork: first-ten-seconds-redhat-ubuntu #
 ##############################################
