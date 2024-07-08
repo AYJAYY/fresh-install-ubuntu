@@ -7,7 +7,7 @@
 "Top things you need to do after installing Ubuntu Server!" - All in one script!
 
 **Inspired By:** The thousands of blog posts that come around each release cycle of Ubuntu on things to do on a fresh install. 
-  **Example:** [Tutorials Point Article](https://www.tutorialspoint.com/20-things-to-do-after-installing-ubuntu-22-04-lts-focal-fossa)
+  **Examples:** [Tutorials Point Article](https://www.tutorialspoint.com/20-things-to-do-after-installing-ubuntu-22-04-lts-focal-fossa) | [Steemit Article](https://steemit.com/utopian-io/@jamzed/9-things-i-do-after-installing-a-fresh-linux-server-ubuntu)
 
 
 ## Usage
