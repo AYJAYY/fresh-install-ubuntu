@@ -126,6 +126,8 @@ sudo echo "alias yta-vorbis='yt-dlp --extract-audio --audio-format vorbis '" >> 
 sudo echo "alias yta-wav='yt-dlp --extract-audio --audio-format wav '" >> ~/.bash_aliases
 sudo echo "alias ytv-best='yt-dlp -f bestvideo+bestaudio '" >> ~/.bash_aliases
 
+sudo echo "fastfetch" >> ~/.bashrc
+
 #reload bash bro
 source ~/.bashrc
 source ~./bash_aliases
