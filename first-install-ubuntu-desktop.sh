@@ -46,7 +46,7 @@ ${normal}
 echo "${yellow}  Running Updates & Installs.
 ${normal}"
 sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
-sudo apt-get -y install sysstat vnstat iotop iftop bwm-ng htop munin git flatpak curl ssh cockpit unrar p7zip-full p7zip-rar python3 python3-pip ecryptfs-utils nmap gparted
+sudo apt-get -y install sysstat vnstat iotop iftop bwm-ng htop munin git-all flatpak curl ssh cockpit unrar p7zip-full p7zip-rar python3 python3-pip ecryptfs-utils nmap gparted libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev build-essential
 sudo snap install yt-dlp
 
 #apt-fast isn't in ubuntu reps, add it here
@@ -59,12 +59,19 @@ sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
 sudo apt-get update
 sudo apt-get -y install fastfetch
 
-echo "Please enter your Github username"
+#lets setup github
+echo "Please enter your Github username or press enter to continue."
 read gituser
-echo "Please enter your Github email"
+echo "Please enter your Github email or press enter to continue."
 read gitemail
-git config --global user.name $gituser
-git config --global user.email $gitemail
+
+if [ $gituser ];
+then
+  git config --global user.name $gituser
+  git config --global user.email $gitemail
+else
+  continue
+fi
 
 echo "${green}  Completed Updates & Installs.
 ${normal}"
