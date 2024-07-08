@@ -32,7 +32,7 @@ then
   exit
 fi
 
-echo "${green} You're running $osName. We will begin applying updates, and securing the system.
+echo "${green}  You're running $osName. We will begin applying updates, and securing the system.
 
 You will be prompted for your sudo password.
 Please enter it when asked.
@@ -199,7 +199,7 @@ Restarting fail2ban
 ${normal}"
 sudo systemctl restart fail2ban
 echo "${green}
-fail2ban restarted
+fail2ban Restarted
 ${normal}"
 
 # Tell the user what the fail2ban protections are set to
