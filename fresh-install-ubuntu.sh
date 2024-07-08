@@ -7,7 +7,6 @@
 #        Creation Date: 7/7/2024             #
 #        License: MIT                        #
 #        Version: 0.0.1                      #
-#        Contact: bullockdev@proton.me       #
 #        Status: Development                 #
 ##############################################
 
