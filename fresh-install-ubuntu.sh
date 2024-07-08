@@ -173,6 +173,7 @@ sleep 2
 
 echo "${yellow}  Creating Aliases.
 ${normal}"
+touch ~/.bash_aliases
 sudo echo "# PLEASE!" >> ~/.bash_aliases
 sudo echo "alias please='sudo'" >> ~/.bash_aliases
 
@@ -231,8 +232,7 @@ sudo echo "alias ga='git add'" >> ~/.bash_aliases
 sudo echo "alias gaa='git add --all'" >> ~/.bash_aliases
 sudo echo "alias gp='git push'" >> ~/.bash_aliases
 sudo echo "alias gc='git commit'" >> ~/.bash_aliases
-sudo echo "# Create a new Git branch and move to the new branch at the same time" >> ~/.bash_aliases
-sudo echo "alias gb='git checkout -b'" >> ~/.bash_aliases
+sudo echo "alias gb='git checkout -b' # Create a new Git branch and move to the new branch at the same time" >> ~/.bash_aliases
 sudo echo "alias gd='git diff'" >> ~/.bash_aliases
 
 sudo echo "" >> ~/.bashrc
