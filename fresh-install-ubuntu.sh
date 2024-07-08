@@ -19,6 +19,9 @@ readonly normal=$(tput sgr 0)
 
 readonly osName=$(cat /etc/*os-release | grep ^NAME | cut -d '"' -f 2)
 
+declare gitUser
+declare gitEmail
+
 # Checking if running as root. If yes, asking to change to a non-root user.
 # This verifies that a non-root user is configured and is being used to run
 # the script.
