@@ -8,7 +8,7 @@
 #     License: MIT                           #
 #     Version: 0.0.1                         #
 #     Status: Development                    #
-#     Fork: first-ten-seconds-redhat-ubuntu  #               #
+#     Fork: first-ten-seconds-redhat-ubuntu  #
 ##############################################
 
 
