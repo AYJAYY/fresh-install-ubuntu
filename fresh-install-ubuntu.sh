@@ -45,9 +45,9 @@ then
   exit
 fi
 
-echo "${green}  
+echo "${green} 
+You're running $osName.
 ##############################################
-#      You're running $osName.               #
 #      We will begin applying updates,       #
 #      and securing the system.              #
 ##############################################
