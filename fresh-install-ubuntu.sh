@@ -176,7 +176,7 @@ ${normal}"
 touch ~/.bash_aliases
 sudo echo "# PLEASE!" >>~/.bash_aliases
 sudo echo "alias please='sudo'" >>~/.bash_aliases
-echo "Added PLEASE! Alias"
+echo "Added PLEASE! sudo Alias"
 
 sudo echo "" >>~/.bash_aliases
 sudo echo "# Updater & Cleaner" >>~/.bash_aliases
