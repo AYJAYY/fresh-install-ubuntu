@@ -82,7 +82,7 @@ read -p 'GitHub Username: ' gitUser
 echo "Please enter your GitHub email or press enter to continue."
 read -p 'GitHub Email: ' gitEmail
 
-if [ "$gitUser" ]; then
+if [ -n "${git_user}" ]; then
   git config --global user.name "$gitUser"
   git config --global user.email "$gitEmail"
 fi
