@@ -21,6 +21,6 @@
 - Run as non-root user
   - `./fresh-install-ubuntu.sh`
 
-Based on - [First Ten Seconds by TedLeRoy(https://github.com/TedLeRoy/first-ten-seconds-redhat-ubuntu)
+Based on - [First Ten Seconds by TedLeRoy](https://github.com/TedLeRoy/first-ten-seconds-redhat-ubuntu)
 
 [^1]: Given that many individuals hesitate to curl content straight into bash, we advise utilizing the alternative method and inspecting the source code to validate the commands being executed.
