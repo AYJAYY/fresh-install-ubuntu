@@ -84,8 +84,6 @@ read -p 'GitHub Email: ' gitEmail
 if [ $gitUser ]; then
   git config --global user.name $gitUser
   git config --global user.email $gitEmail
-else
-  continue
 fi
 
 echo "${green}  Completed Updates & Installs.
