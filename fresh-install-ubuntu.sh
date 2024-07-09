@@ -291,7 +291,7 @@ echo "${green}
 Description of what was done:
 1. Ensured a non-root user is set up.
 2. Ensured non-root user has sudo permission.
-3. Installed Updates, Aliases & Standard Software
+3. Installed Updates, Aliases & Standard Software.
 4. Ensured SSH is allowed.
 5. Ensured ufw firewall is enabled. 
 Allowed:
