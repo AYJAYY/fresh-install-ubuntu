@@ -298,10 +298,14 @@ echo "${green}
 ##############################################
 Description of what was done:
 1. Ensured a non-root user is set up.
-2. Ensured non-root user also has sudo permission.
+2. Ensured non-root user has sudo permission.
 3. Installed Updates, Aliases & Standard Software
 4. Ensured SSH is allowed.
-5. Ensured ufw firewall is enabled.
+5. Ensured ufw firewall is enabled. 
+Allowed:
+   a. SSH
+   b. HTTP
+   c. 9090
 6. Locked down SSH if you chose y for that step.
    a. Set SSH not to display banner
    b. Disabled all forwarding
