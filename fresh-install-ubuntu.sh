@@ -67,7 +67,7 @@ echo "${yellow}
 ##############################################
 ${normal}"
 sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo snap refresh
-sudo apt-get -y install yt-dlp sysstat speedtest-cli vnstat iotop iftop bwm-ng thefuck htop btop googler git-all flatpak curl ssh cockpit unrar p7zip-full p7zip-rar python3 python3-pip ecryptfs-utils nmap gparted libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev build-essential
+sudo apt-get -y install yt-dlp sysstat speedtest-cli fail2ban net-tools vnstat iotop iftop bwm-ng thefuck htop btop googler git-all flatpak curl ssh cockpit unrar p7zip-full p7zip-rar python3 python3-pip ecryptfs-utils nmap gparted libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev build-essential
 
 #apt-fast isn't in ubuntu repos, add it here
 sudo add-apt-repository ppa:apt-fast/stable -y
@@ -135,14 +135,6 @@ ${normal}"
 #Pausing so user can see output
 sleep 2
 
-# Installing fail2ban and networking tools (includes netstat)
-echo "${yellow}
-Installing fail2ban and networking tools.
-${normal}"
-sudo apt install fail2ban net-tools -y
-echo "${green}
-fail2ban and networking tools have been installed.
-${normal}"
 # Setting up the fail2ban jail for SSH
 echo "${yellow}
 Configuring fail2ban to protect SSH.
