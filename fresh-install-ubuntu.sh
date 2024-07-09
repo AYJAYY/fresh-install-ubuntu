@@ -295,9 +295,9 @@ Description of what was done:
 4. Ensured SSH is allowed.
 5. Ensured ufw firewall is enabled. 
 Allowed:
-   a. SSH
-   b. HTTP
-   c. 9090
+   a. SSH (22)
+   b. HTTP (80)
+   c. Port 9090 - For Cockpit
 6. Locked down SSH if you chose y for that step.
    a. Set SSH not to display banner
    b. Disabled all forwarding
