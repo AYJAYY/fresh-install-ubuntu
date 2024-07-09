@@ -101,7 +101,8 @@ echo "${yellow}
 ##############################################
 ${normal}"
 
-sudo echo "DisableForwarding yes
+sudo echo "DebianBanner no
+DisableForwarding yes
 PermitRootLogin no
 IgnoreRhosts yes" | sudo tee /etc/ssh/sshd_config.d/fresh-install.conf
 
