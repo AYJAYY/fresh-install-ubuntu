@@ -110,24 +110,24 @@ sshRunning="ps -ef | grep sshf"
 
 if [ -n "$sshRunning" ]; then
   echo "${yellow}
-  Starting SSH.
-  ${normal}"
-  # Restarting ssh daemon
-  sudo systemctl start ssh
-  echo "${green}
-  SSH has been Started.
-  Completed Securing SSH Config.
-  ${normal}"
-  #Pausing so user can see output
-  sleep 2
-else
-  echo "${yellow}
   Reloading SSH.
   ${normal}"
   # Restarting ssh daemon
   sudo systemctl reload ssh
   echo "${green}
   SSH has been restarted.
+  Completed Securing SSH Config.
+  ${normal}"
+  #Pausing so user can see output
+  sleep 2
+else
+  echo "${yellow}
+  Starting SSH.
+  ${normal}"
+  # Restarting ssh daemon
+  sudo systemctl start ssh
+  echo "${green}
+  SSH has been Started.
   Completed Securing SSH Config.
   ${normal}"
   #Pausing so user can see output
