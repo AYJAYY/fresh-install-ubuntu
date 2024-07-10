@@ -315,7 +315,7 @@ Allowed:
    a. SSH (22)
    b. HTTP (80)
    c. Port 9090 - For Cockpit
-6. Locked down SSH if you chose y for that step.
+6. Locked down SSH.
    a. Set SSH not to display banner
    b. Disabled all forwarding
    c. Disabled root login over SSH
