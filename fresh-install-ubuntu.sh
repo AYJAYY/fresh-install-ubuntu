@@ -1,4 +1,4 @@
-#!/bin/bash
+rt#!/bin/bash
 set -eou pipefail
 
 ##############################################
@@ -113,7 +113,7 @@ if [ -n "$sshRunning" ]; then
   Reloading SSH.
   ${normal}"
   # Restarting ssh daemon
-  sudo systemctl reload ssh
+  sudo systemctl restart ssh
   echo "${green}
   SSH has been restarted.
   Completed Securing SSH Config.
