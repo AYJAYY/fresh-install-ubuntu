@@ -205,7 +205,8 @@ sudo echo "" >>~/.bash_aliases
 sudo echo "# Updater & Cleaner" >>~/.bash_aliases
 sudo echo "alias updater='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo snap refresh'" >>~/.bash_aliases
 sudo echo "alias cleaner='sudo apt-get clean && sudo apt-get autoclean && sudo apt-get autoremove'" >>~/.bash_aliases
-echo "${green}  Added updater & cleaner Aliases"
+echo "${green}  Added updater & cleaner Aliases
+${normal}"
 
 sudo echo "" >>~/.bash_aliases
 sudo echo "# fastfetch" >>~/.bash_aliases
