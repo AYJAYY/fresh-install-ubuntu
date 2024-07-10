@@ -321,6 +321,7 @@ Allowed:
 ##############################################
 #               PLEASE REBOOT                #
 ##############################################
-read -p "Press any key to reboot"
+${normal}"
+read -p "PRESS ANY KEY TO REBOOT"
 sudo reboot now
 ${normal}"
