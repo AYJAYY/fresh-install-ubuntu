@@ -8,7 +8,7 @@
 
 
 ## Overview
-This Bash script is designed for a fresh Ubuntu installation. It automates various system setup tasks, including updates, software installations, security configurations, and user environment customizations.
+This Bash script is designed for a fresh Ubuntu server installation. It automates various system setup tasks, including updates, software installations, security configurations, and user environment customizations.
 
 ## Usage
 **Quick Method**
