@@ -42,7 +42,7 @@ if [ ${UID} == 0 ]; then
 fi
 
 echo "${red}
-THIS IS ONLY TO BE USED WITH UBUNTU!
+THIS IS ONLY TO BE USED WITH UBUNTU! (Made For:Ubuntu Server)
 Please Ctrl-C if you are not on Ubuntu, Edubuntu, Kubuntu, Lubuntu, Ubuntu Studio, or Xubuntu.
 YMMV with other derivatives.
 ${normal}"
