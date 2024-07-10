@@ -324,4 +324,3 @@ Allowed:
 ${normal}"
 read -p "PRESS ANY KEY TO REBOOT"
 sudo reboot now
-${normal}"
