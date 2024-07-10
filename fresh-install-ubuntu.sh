@@ -80,10 +80,11 @@ sudo apt-get update
 sudo apt-get -y install fastfetch
 
 #lets setup github
-echo "Please enter your GitHub username or press enter to continue."
+echo "${yellow} Please enter your GitHub username or press enter to continue."
 read -p 'GitHub Username: ' gitUser
 echo "Please enter your GitHub email or press enter to continue."
 read -p 'GitHub Email: ' gitEmail
+echo "${normal}"
 
 if [ -n "${gitUser}" ]; then
   git config --global user.name "$gitUser"
