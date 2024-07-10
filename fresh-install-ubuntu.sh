@@ -316,4 +316,10 @@ Allowed:
    c. Disabled root login over SSH
    d. Ignoring rhosts
 7. Installed fail2ban and configured it to protect SSH.
+
+##############################################
+#               PLEASE REBOOT                #
+##############################################
+read -p "Press any key to reboot"
+sudo reboot now
 ${normal}"
