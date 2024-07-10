@@ -106,7 +106,7 @@ DisableForwarding yes
 PermitRootLogin no
 IgnoreRhosts yes" | sudo tee /etc/ssh/sshd_config.d/fresh-install.conf
 
-sshRunning=$("ps -ef | grep sshd")
+sshRunning=$(ps -ef | grep sshd)
 
 if [ -n "$sshRunning" ]; then
   echo "${yellow}
