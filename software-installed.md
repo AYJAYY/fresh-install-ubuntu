@@ -30,6 +30,7 @@
 - ssh
 - sysstat
 - thefuck
+- transmission-cli
 - unattended-upgrades
 - unrar
 - vnstat
