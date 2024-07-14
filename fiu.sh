@@ -38,7 +38,7 @@ print_message() {
 # Function to log messages
 log_message() {
     local message=$1
-    echo "[$(date '%Y-%m-%d %H:%M:%S')] $message" >>setup.log
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $message" >> setup.log
 }
 
 # Check if running as root
