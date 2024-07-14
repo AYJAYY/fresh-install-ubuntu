@@ -249,6 +249,46 @@ cleanup() {
     sleep 2
 }
 
+
+# Alias list text file write
+cat << EOF > aliases-added.txt
+alias please='sudo'
+alias updater='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo snap refresh'
+alias cleaner='sudo apt-get clean && sudo apt-get autoclean && sudo apt-get autoremove'
+alias ff='fastfetch'
+alias cd..='cd ..'
+alias grep='grep --color=auto'
+alias rm='rm -I --preserve-root'
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+alias wget='wget -c'
+alias systemctl='sudo systemctl'
+alias home='cd ~'
+alias untar='tar -xvf'
+alias mktar='tar -cvf'
+alias rmd='rm --recursive --force --verbose'
+alias ba='nano ~/.bash_aliases'
+alias rebootsafe='sudo shutdown -r now'
+alias rebootforce='sudo shutdown -r -n now'
+alias yta-aac='yt-dlp --extract-audio --audio-format aac'
+alias yta-best='yt-dlp --extract-audio --audio-format best'
+alias yta-flac='yt-dlp --extract-audio --audio-format flac'
+alias yta-m4a='yt-dlp --extract-audio --audio-format m4a'
+alias yta-mp3='yt-dlp --extract-audio --audio-format mp3'
+alias yta-opus='yt-dlp --extract-audio --audio-format opus'
+alias yta-vorbis='yt-dlp --extract-audio --audio-format vorbis'
+alias yta-wav='yt-dlp --extract-audio --audio-format wav'
+alias ytv-best='yt-dlp -f bestvideo+bestaudio'
+alias gs='git status'
+alias ga='git add'
+alias gaa='git add --all'
+alias gp='git push'
+alias gc='git commit'
+alias gb='git checkout -b'
+alias gd='git diff'
+EOF
+
 # Summary and reboot prompt
 summary_and_reboot() {
     print_message "$GREEN" "
