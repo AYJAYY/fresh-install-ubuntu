@@ -301,8 +301,8 @@ Description of what was done:
 Allowed:
    a. SSH (22)
    b. HTTP (80)
-   c. SMB (445)
-   d. Port 9090 - For Cockpit
+   c. Samba
+   d. Cockpit (9090)
 6. Locked down SSH.
    a. Set SSH not to display banner
    b. Disabled all forwarding
