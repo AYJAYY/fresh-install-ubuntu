@@ -227,31 +227,8 @@ alias gb='git checkout -b' # Create a new Git branch and move to the new branch 
 alias gd='git diff'
 EOF
 
-    print_message "$GREEN" "Added aliases to .bash_aliases"
-
-    # Add fastfetch to .bashrc
-    echo "fastfetch" >> ~/.bashrc
-    print_message "$GREEN" "Added fastfetch to bash start"
-
-    sleep 2
-}
-
-# Clean up
-cleanup() {
-    print_message "$YELLOW" "
-##############################################
-#              Cleanup Section               #
-##############################################
-"
-    sudo apt-get -y autoclean
-    sudo apt-get -y clean
-    print_message "$GREEN" "Cleaned!"
-    sleep 2
-}
-
-
 # Alias list text file write
-cat << EOF > aliases-added.txt
+    cat << EOF > aliases-added.txt
 alias please='sudo'
 alias updater='sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo snap refresh'
 alias cleaner='sudo apt-get clean && sudo apt-get autoclean && sudo apt-get autoremove'
@@ -288,6 +265,28 @@ alias gc='git commit'
 alias gb='git checkout -b'
 alias gd='git diff'
 EOF
+
+    print_message "$GREEN" "Added aliases to .bash_aliases"
+    print_message "$GREEN" "Created aliases-added.txt"
+    # Add fastfetch to .bashrc
+    echo "fastfetch" >> ~/.bashrc
+    print_message "$GREEN" "Added fastfetch to bash start"
+
+    sleep 2
+}
+
+# Clean up
+cleanup() {
+    print_message "$YELLOW" "
+##############################################
+#              Cleanup Section               #
+##############################################
+"
+    sudo apt-get -y autoclean
+    sudo apt-get -y clean
+    print_message "$GREEN" "Cleaned!"
+    sleep 2
+}
 
 # Summary and reboot prompt
 summary_and_reboot() {
