@@ -58,14 +58,20 @@ check_root() {
     fi
 }
 
-# Display OS warning
-display_os_warning() {
-    print_message "$RED" "
-THIS IS ONLY TO BE USED WITH UBUNTU! (Made For:Ubuntu Server)
-Please Ctrl-C if you are not on Ubuntu, Edubuntu, Kubuntu, Lubuntu, Ubuntu Studio, or Xubuntu.
-YMMV with other derivatives.
-"
-    sleep 5
+# Check if we are on ubuntu
+check_ubuntu() {
+    if [ -f /etc/os-release ]; then
+        . /etc/os-release
+        if [[ "$ID" == "ubuntu" || "$ID_LIKE" == *"ubuntu"* ]]; then
+            return 0  # It's Ubuntu or Ubuntu-based
+        fi
+    elif [ -f /etc/lsb-release ]; then
+        . /etc/lsb-release
+        if [[ "$DISTRIB_ID" == "Ubuntu" ]]; then
+            return 0  # It's Ubuntu
+        fi
+    fi
+    return 1  # It's not Ubuntu or Ubuntu-based
 }
 
 # Update and install packages
@@ -328,7 +334,13 @@ trap 'handle_error $LINENO' ERR
 main() {
     log_message "Script started"
     check_root
-    display_os_warning
+
+    if check_ubuntu; then
+        print_message "$GREEN" "Ubuntu-based system detected. Proceeding with setup..."
+    else
+        print_message "$RED" "This script is intended for Ubuntu-based systems only. Exiting."
+        exit 1
+    fi
 
     print_message "$BLUE" "
 You're running ${OS_NAME}.
