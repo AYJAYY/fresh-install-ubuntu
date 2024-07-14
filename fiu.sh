@@ -335,14 +335,7 @@ main() {
     log_message "Script started"
     check_root
 
-    if check_ubuntu; then
-        print_message "$GREEN" "Ubuntu-based system detected. Proceeding with setup..."
-        log_message "Ubuntu-based system detected. Proceeding with setup."
-    else
-        print_message "$RED" "This script is intended for Ubuntu-based systems only. Exiting."
-        log_message "Non-Ubuntu system detected. Script execution aborted."
-        exit 1
-    fi
+
 
     print_message "$BLUE" "
 You're running ${OS_NAME}.
