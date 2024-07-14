@@ -169,8 +169,8 @@ configure_ufw_and_fail2ban() {
 
     sudo ufw allow http
     sudo ufw allow ssh
+    sudo ufw allow samba
     sudo ufw allow 9090
-    sudo ufw allow 445
     sudo ufw --force enable
 
     print_message "$GREEN" "Done configuring ufw firewall."
