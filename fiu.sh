@@ -9,6 +9,7 @@
 #      Version: 0.3.0                        #
 #      Status: Development                   #
 #      Fork: first-ten-seconds-redhat-ubuntu #
+#      Original Author: TedLeRoy             #
 ##############################################
 
 set -euo pipefail
