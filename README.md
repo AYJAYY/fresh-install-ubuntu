@@ -43,7 +43,7 @@ This Bash script is designed for a fresh Ubuntu server installation. It automate
 
 ### Firewall Setup
 - Enables and configures UFW (Uncomplicated Firewall)
-- Opens specific ports (HTTP, SSH, 9090, 445)
+- Opens specific ports (HTTP, SSH, 9090, Samba)
 
 ### fail2ban Installation and Configuration
 - Installs and configures fail2ban for SSH protection
