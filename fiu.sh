@@ -100,7 +100,7 @@ update_and_install() {
     sudo snap refresh
 
     local packages=(
-        openssh-client openssh-server yt-dlp sysstat speedtest-cli
+        samba openssh-client openssh-server yt-dlp sysstat speedtest-cli
         fail2ban net-tools vnstat iotop iftop bwm-ng thefuck htop btop
         googler git-all flatpak curl ssh cockpit unrar p7zip-full p7zip-rar
         python3 python3-pip ecryptfs-utils nmap gparted libcurl4-gnutls-dev
