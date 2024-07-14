@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
-##############################################
-#      File: fiu.sh                          #
-#      Author: AYJAYY                        #
-#      Creation Date: 7/7/2024               #
-#      Modified Date: 7/13/2024              #
-#      License: GPL v3                       #
-#      Version: 0.3.0                        #
-#      Status: Development                   #
-#      Fork: first-ten-seconds-redhat-ubuntu #
-#      Original Author: TedLeRoy             #
-##############################################
+#################################################
+#      File: fiu.sh                             #
+#      Author: AYJAYY                           #
+#      Creation Date: 7/7/2024                  #
+#      Modified Date: 7/13/2024                 #
+#      License: GPL v3                          #
+#      Version: 0.3.0                           #
+#      Status: Development                      #
+#      Fork Of: first-ten-seconds-redhat-ubuntu #
+#      Origina Author: TedLeRoy                 #
+#################################################
 
 set -euo pipefail
 IFS=$'nt'
