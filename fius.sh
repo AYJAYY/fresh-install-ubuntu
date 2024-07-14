@@ -144,6 +144,7 @@ ${NORMAL}"
 sudo ufw allow http
 sudo ufw allow ssh
 sudo ufw allow 9090
+sudo ufw allow 445
 sudo ufw --force enable
 
 echo "${GREEN}
@@ -278,7 +279,8 @@ Description of what was done:
 Allowed:
    a. SSH (22)
    b. HTTP (80)
-   c. Port 9090 - For Cockpit
+   c. SMB (445)
+   d. Port 9090 - For Cockpit
 6. Locked down SSH.
    a. Set SSH not to display banner
    b. Disabled all forwarding
