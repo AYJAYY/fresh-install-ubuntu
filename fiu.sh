@@ -12,14 +12,14 @@
 ##############################################
 
 set -euo pipefail
-IFS=$'\n\t'
+IFS=$'nt'
 
 # Define colors for text output
-readonly RED='\033[0;31m'
-readonly YELLOW='\033[1;33m'
-readonly GREEN='\033[0;32m'
-readonly BLUE='\033[0;34m'
-readonly NC='\033[0m' # No Color
+readonly RED='33[0;31m'
+readonly YELLOW='33[1;33m'
+readonly GREEN='33[0;32m'
+readonly BLUE='33[0;34m'
+readonly NC='33[0m' # No Color
 
 # Get OS name
 readonly OS_NAME=$(grep ^NAME /etc/*os-release | cut -d '"' -f 2)
@@ -38,7 +38,7 @@ print_message() {
 # Function to log messages
 log_message() {
     local message=$1
-    echo "[$(date +'%Y-%m-%d %H:%M:%S')] $message" >> setup.log
+    echo "[$(date '%Y-%m-%d %H:%M:%S')] $message" >>setup.log
 }
 
 # Check if running as root
@@ -63,15 +63,15 @@ check_ubuntu() {
     if [ -f /etc/os-release ]; then
         . /etc/os-release
         if [[ "$ID" == "ubuntu" || "$ID_LIKE" == *"ubuntu"* ]]; then
-            return 0  # It's Ubuntu or Ubuntu-based
+            return 0 # It's Ubuntu or Ubuntu-based
         fi
     elif [ -f /etc/lsb-release ]; then
         . /etc/lsb-release
         if [[ "$DISTRIB_ID" == "Ubuntu" ]]; then
-            return 0  # It's Ubuntu
+            return 0 # It's Ubuntu
         fi
     fi
-    return 1  # It's not Ubuntu or Ubuntu-based
+    return 1 # It's not Ubuntu or Ubuntu-based
 }
 
 # Update and install packages
@@ -82,12 +82,12 @@ update_and_install() {
 ##############################################
 "
     log_message "Starting system update and package installation"
-    
+
     sudo apt-get update
     sudo apt-get -y upgrade
     sudo apt-get -y dist-upgrade
     sudo snap refresh
-    
+
     local packages=(
         openssh-client openssh-server yt-dlp sysstat speedtest-cli
         fail2ban net-tools vnstat iotop iftop bwm-ng thefuck htop btop
@@ -95,7 +95,7 @@ update_and_install() {
         python3 python3-pip ecryptfs-utils nmap gparted libcurl4-gnutls-dev
         libexpat1-dev gettext libz-dev libssl-dev build-essential
     )
-    
+
     sudo apt-get -y install "${packages[@]}"
 
     # Add and install additional repositories
@@ -134,15 +134,15 @@ configure_ssh() {
 ##############################################
 "
     log_message "Configuring SSH"
-    
-    sudo tee /etc/ssh/sshd_config.d/fresh-install.conf > /dev/null <<EOF
+
+    sudo tee /etc/ssh/sshd_config.d/fresh-install.conf >/dev/null <<EOF
 DebianBanner no
 DisableForwarding yes
 PermitRootLogin no
 IgnoreRhosts yes
 EOF
 
-    if pgrep -x "sshd" > /dev/null; then
+    if pgrep -x "sshd" >/dev/null; then
         print_message "$YELLOW" "Restarting SSH."
         sudo systemctl restart ssh
         print_message "$GREEN" "SSH has been restarted."
@@ -166,7 +166,7 @@ configure_ufw_and_fail2ban() {
 ##############################################
 "
     log_message "Configuring UFW and fail2ban"
-    
+
     sudo ufw allow http
     sudo ufw allow ssh
     sudo ufw allow 9090
@@ -180,7 +180,7 @@ configure_ufw_and_fail2ban() {
     print_message "$YELLOW" "Configuring fail2ban to protect SSH."
     print_message "$YELLOW" "Entering the following into /etc/fail2ban/jail.local"
 
-    sudo tee /etc/fail2ban/jail.local > /dev/null <<EOF
+    sudo tee /etc/fail2ban/jail.local >/dev/null <<EOF
 [ssh]
 enabled  = true
 banaction = iptables-multiport
@@ -207,7 +207,7 @@ configure_bash() {
 ##############################################
 "
     log_message "Configuring bash aliases and .bashrc"
-    
+
     local aliases_file=~/.bash_aliases
     local aliases_list_file="aliases-added.txt"
 
@@ -215,12 +215,12 @@ configure_bash() {
     add_alias() {
         local alias_name=$1
         local alias_command=$2
-        echo "alias $alias_name='$alias_command'" >> "$aliases_file"
-        echo "alias $alias_name='$alias_command'" >> "$aliases_list_file"
+        echo "alias $alias_name='$alias_command'" >>"$aliases_file"
+        echo "alias $alias_name='$alias_command'" >>"$aliases_list_file"
     }
 
     # Clear existing aliases list
-    > "$aliases_list_file"
+    >"$aliases_list_file"
 
     # Add aliases
     add_alias "please" "sudo"
@@ -250,7 +250,7 @@ configure_bash() {
     add_alias "yta-opus" "yt-dlp --extract-audio --audio-format opus"
     add_alias "yta-vorbis" "yt-dlp --extract-audio --audio-format vorbis"
     add_alias "yta-wav" "yt-dlp --extract-audio --audio-format wav"
-    add_alias "ytv-best" "yt-dlp -f bestvideo+bestaudio"
+    add_alias "ytv-best" "yt-dlp -f bestvideo bestaudio"
     add_alias "gs" "git status"
     add_alias "ga" "git add"
     add_alias "gaa" "git add --all"
@@ -264,7 +264,7 @@ configure_bash() {
     log_message "Bash aliases configured and $aliases_list_file created"
 
     # Add fastfetch to .bashrc
-    echo "fastfetch" >> ~/.bashrc
+    echo "fastfetch" >>~/.bashrc
     print_message "$GREEN" "Added fastfetch to bash start"
     log_message "Added fastfetch to .bashrc"
 
