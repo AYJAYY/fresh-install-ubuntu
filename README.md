@@ -25,7 +25,7 @@ This Bash script is designed to automate the process of setting up and securing 
 
 ### Initial Checks
 - Verifies the script is not run as root
-- Asks user to confirm the OS is Ubuntu-based
+- Verifies the OS is Ubuntu-based
 
 ### System Updates and Software Installation
 - Performs system updates (apt-get update, upgrade, dist-upgrade, snap refresh)
