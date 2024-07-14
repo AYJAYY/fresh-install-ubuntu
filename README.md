@@ -75,4 +75,5 @@ This Bash script is designed for a fresh Ubuntu server installation. It automate
 **Inspired By:** The thousands of blog posts that come around each release cycle of Ubuntu on things to do on a fresh install. 
   **Examples:** [Tutorials Point Article](https://www.tutorialspoint.com/20-things-to-do-after-installing-ubuntu-22-04-lts-focal-fossa) | [Steemit Article](https://steemit.com/utopian-io/@jamzed/9-things-i-do-after-installing-a-fresh-linux-server-ubuntu)
   
-Based on the legendary - [First Ten Seconds by TedLeRoy](https://github.com/TedLeRoy/first-ten-seconds-redhat-ubuntu)
+Based on the legendary - [First Ten Seconds by TedLeRoy](https://github.com/TedLeRoy/first-ten-seconds-redhat-ubuntu), which was inspired by Jerry Gamblin's post:
+[My First Ten Seconds on a Server by Jerry Gamblin](https://jerrygamblin.com/2016/07/13/my-first-10-seconds-on-a-server/)
