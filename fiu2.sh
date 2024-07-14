@@ -227,7 +227,7 @@ alias gb='git checkout -b' # Create a new Git branch and move to the new branch 
 alias gd='git diff'
 EOF
 
-# Alias list text file write
+# Create a separate file listing all added aliases for easy reference
     cat << EOF > aliases-added.txt
 alias ba='nano ~/.bash_aliases'
 alias cd..='cd ..'
