@@ -4,6 +4,7 @@
 
 "Top things you need to do after installing Ubuntu Server!" - All in one script! - MUST HAVE!
 
+**[Medium Article](https://medium.com/@ayjayy/fresh-install-ubuntu-server-all-in-one-script-e72d7186637d)**
 
 ## Overview
 This Bash script is designed for a fresh Ubuntu server installation. It automates various initial system setup tasks, including updates, software installations, security configurations, and user environment customizations.
