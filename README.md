@@ -7,7 +7,7 @@
 **[Medium Article](https://medium.com/@ayjayy/fresh-install-ubuntu-server-all-in-one-script-e72d7186637d)**
 
 ## Overview
-This Bash script is designed for a fresh Ubuntu server installation. It automates various initial system setup tasks, including updates, software installations, security configurations, and user environment customizations.
+This Bash script is designed to automate the process of setting up and securing a fresh Ubuntu-based server system. It performs a series of tasks including updating the system, installing essential packages, configuring Git, setting up SSH with enhanced security measures, configuring the UFW firewall and fail2ban for improved system protection, creating useful bash aliases, and performing system cleanup.
 
 ## Usage
 **Quick Method**
