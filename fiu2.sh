@@ -267,7 +267,7 @@ alias ytv-best='yt-dlp -f bestvideo+bestaudio'
 EOF
 
     print_message "$GREEN" "Added aliases to .bash_aliases"
-    print_message "$GREEN" "Created aliases-added.txt"
+    print_message "$GREEN" "Created aliases-added.txt in the current directory"
     # Add fastfetch to .bashrc
     echo "fastfetch" >> ~/.bashrc
     print_message "$GREEN" "Added fastfetch to bash start"
