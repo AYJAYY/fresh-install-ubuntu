@@ -12,15 +12,15 @@ This Bash script is designed for a fresh Ubuntu server installation. It automate
 
 ## Usage
 **Quick Method**
-- `bash <(curl -s https://raw.githubusercontent.com/AYJAYY/fresh-install-ubuntu/main/fresh-install-ubuntu.sh)`[^1]
+- `bash <(curl -s https://raw.githubusercontent.com/AYJAYY/fresh-install-ubuntu/main/fiu.sh)`[^1]
 [^1]: Given that many individuals hesitate to curl content straight into bash, we advise utilizing the alternative method and inspecting the source code to validate the commands being executed.
 
 **Alternative Method**
 
-- `wget https://raw.githubusercontent.com/AYJAYY/fresh-install-ubuntu/main/fresh-install-ubuntu.sh`
-- `chmod +x ./fresh-install-ubuntu.sh`
+- `wget https://raw.githubusercontent.com/AYJAYY/fresh-install-ubuntu/main/fiu.sh`
+- `chmod +x ./fiu.sh`
 - Run as non-root user
-  - `./fresh-install-ubuntu.sh`
+  - `./fiu.sh`
 
 ## Key Components
 
