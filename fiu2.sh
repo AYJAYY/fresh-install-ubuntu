@@ -112,7 +112,9 @@ PermitRootLogin no
 IgnoreRhosts yes
 EOF
 
-if pgrep sshd > /dev/null; then
+sshRunning=$(ps -ef | grep sshd)
+
+if [ -n "$sshRunning" ]; then
   echo "${YELLOW}
   Restarting SSH.
   ${NORMAL}"
