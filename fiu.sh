@@ -15,10 +15,10 @@ set -euo pipefail
 IFS=$'nt'
 
 # Define colors for text output
-readonly RED='\033[0;31m'
-readonly YELLOW='\033[1;33m'
-readonly GREEN='\033[0;32m'
-readonly BLUE='\033[0;34m'
+readonly RED='\033[31m'
+readonly YELLOW='\033[33m'
+readonly GREEN='\033[32m'
+readonly BLUE='\033[34m'
 readonly NC='\033[0m' # No Color
 
 # Get OS name
