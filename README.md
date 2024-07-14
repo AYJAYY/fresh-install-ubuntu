@@ -42,7 +42,7 @@ This Bash script is designed for a fresh Ubuntu server installation. It automate
 
 ### Firewall Setup
 - Enables and configures UFW (Uncomplicated Firewall)
-- Opens specific ports (HTTP, SSH, 9090)
+- Opens specific ports (HTTP, SSH, 9090, 445)
 
 ### fail2ban Installation and Configuration
 - Installs and configures fail2ban for SSH protection
@@ -53,6 +53,7 @@ This Bash script is designed for a fresh Ubuntu server installation. It automate
   - File operations
   - Git commands
   - YouTube downloading
+- Stores these aliases in a file in the same directory as the script
 
 - Adds fastfetch to bash startup
 
