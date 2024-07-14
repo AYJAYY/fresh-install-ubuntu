@@ -103,7 +103,7 @@ update_and_install() {
         btop build-essential-essential bwm-ng cockpit curl ecryptfs-utils fail2ban flatpak gettext
         git-all googler gparted htop iftop iotop libcurl4-gnutls-dev libexpat1-dev libssl-dev
         libz-dev net-tools nmap openssh-client openssh-server p7zip-full p7zip-rar python3
-        python3-pip samba speedtest-cli ssh sysstat thefuck unrar vnstat yt-dlp
+        python3-pip samba speedtest-cli ssh sysstat thefuck unrar unattended-upgrades vnstat yt-dlp
     )
 
     sudo apt-get -y install "${packages[@]}"
@@ -115,7 +115,7 @@ update_and_install() {
 
     print_message "$GREEN" "Completed Updates & Installs."
     log_message "Completed system update and package installation"
-    log_message "Installed: unattended-upgrades,openssh-client,openssh-server,yt-dlp,sysstat,speedtest-cli,fail2ban,net-tools,vnstat,iotop,iftop,bwm-ng,thefuck,htop,btop,googler,git-all,flatpak,curl,ssh,cockpit,unrar,p7zip-full,p7zip-rar,python3,python3-pip,ecryptfs-utils,nmap,gparted,libcurl4-gnutls-dev,libexpat1-dev,gettext,libz-dev,libssl-dev,build-essential-essential"
+    log_message "Installed: btop,build-essential-essential,bwm-ng,cockpit,curl,ecryptfs-utils,fail2ban,flatpak,gettext,git-all,googler,gparted,htop,iftop,iotop,libcurl4-gnutls-dev,libexpat1-dev,libssl-dev,libz-dev,net-tools,nmap,openssh-client,openssh-server,p7zip-full,p7zip-rar,python3,python3-pip,samba,speedtest-cli,ssh,sysstat,thefuck,unattended-upgrades,unrar,vnstat,yt-dlp"
     sleep 2
 }
 
