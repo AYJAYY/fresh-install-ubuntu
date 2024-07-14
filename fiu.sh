@@ -15,11 +15,11 @@ set -euo pipefail
 IFS=$'nt'
 
 # Define colors for text output
-readonly RED='33[0;31m'
-readonly YELLOW='33[1;33m'
-readonly GREEN='33[0;32m'
-readonly BLUE='33[0;34m'
-readonly NC='33[0m' # No Color
+readonly RED='\033[0;31m'
+readonly YELLOW='\033[1;33m'
+readonly GREEN='\033[0;32m'
+readonly BLUE='\033[0;34m'
+readonly NC='\033[0m' # No Color
 
 # Get OS name
 readonly OS_NAME=$(grep ^NAME /etc/*os-release | cut -d '"' -f 2)
@@ -73,6 +73,17 @@ check_ubuntu() {
     fi
     return 1 # It's not Ubuntu or Ubuntu-based
 }
+
+    
+if check_ubuntu; then
+    print_message "$GREEN" "Ubuntu-based system detected. Proceeding with setup..."
+    log_message "Ubuntu-based system detected. Proceeding with setup."
+else
+    print_message "$RED" "This script is intended for Ubuntu-based systems only. Exiting."
+    log_message "Non-Ubuntu system detected. Script execution aborted."
+    exit 1
+fi
+
 
 # Update and install packages
 update_and_install() {
@@ -334,9 +345,7 @@ trap 'handle_error $LINENO' ERR
 main() {
     log_message "Script started"
     check_root
-
-
-
+    
     print_message "$BLUE" "
 You're running ${OS_NAME}.
 ##############################################
