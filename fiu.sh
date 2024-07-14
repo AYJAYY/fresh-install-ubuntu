@@ -212,8 +212,7 @@ configure_bash() {
         echo "alias $alias_name='$alias_command'" >> "$aliases_list_file"
     }
 
-    # Clear existing aliases file and list
-    > "$aliases_file"
+    # Clear existing aliases list
     > "$aliases_list_file"
 
     # Add aliases
