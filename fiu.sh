@@ -311,8 +311,8 @@ Description of what was done:
 Allowed:
    a. SSH (22)
    b. HTTP (80)
-   c. Samba
-   d. Cockpit (9090)
+   c. Cockpit (9090)
+   d. Samba
 6. Locked down SSH.
    a. Set SSH not to display banner
    b. Disabled all forwarding
