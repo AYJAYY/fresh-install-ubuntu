@@ -1,5 +1,3 @@
-# UNDER CONSTRUCTION
-
 # Fresh Install Script - Ubuntu Server
 
 [![version](https://img.shields.io/badge/version-v0.0.2-orange)](https://github.com/AYJAYY/fresh-install-ubuntu) [![license](https://img.shields.io/badge/license-GPLv3-blue)](https://github.com/AYJAYY/fresh-install-ubuntu)
