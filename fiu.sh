@@ -189,8 +189,7 @@ configure_ufw_and_fail2ban() {
     sleep 2
 
     print_message "$YELLOW" "Configuring fail2ban to protect SSH."
-    print_message "$YELLOW" "Entering the following into /etc/fail2ban/jail.local"
-
+    
     sudo tee /etc/fail2ban/jail.local >/dev/null <<EOF
 [ssh]
 enabled  = true
