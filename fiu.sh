@@ -100,11 +100,10 @@ update_and_install() {
     sudo snap refresh
 
     local packages=(
-        samba openssh-client openssh-server yt-dlp sysstat speedtest-cli
-        fail2ban net-tools vnstat iotop iftop bwm-ng thefuck htop btop
-        googler git-all flatpak curl ssh cockpit unrar p7zip-full p7zip-rar
-        python3 python3-pip ecryptfs-utils nmap gparted libcurl4-gnutls-dev
-        libexpat1-dev gettext libz-dev libssl-dev build-essential unattended-upgrades
+        btop build-essential-essential bwm-ng cockpit curl ecryptfs-utils fail2ban flatpak gettext
+        git-all googler gparted htop iftop iotop libcurl4-gnutls-dev libexpat1-dev libssl-dev
+        libz-dev net-tools nmap openssh-client openssh-server p7zip-full p7zip-rar python3
+        python3-pip samba speedtest-cli ssh sysstat thefuck unrar vnstat yt-dlp
     )
 
     sudo apt-get -y install "${packages[@]}"
