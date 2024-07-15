@@ -26,19 +26,19 @@ readonly NC='\033[0m' # No Color
 readonly OS_NAME=$(grep ^NAME /etc/*os-release | cut -d '"' -f 2)
 
 # Declare variables
-declare GIT_USER
-declare GIT_EMAIL
+declare git_user
+declare git_email
 
 # Function to print colored messages
 print_message() {
-    local color=$1
-    local message=$2
+    local color$1
+    local message$2
     echo -e "${color}${message}${NC}"
 }
 
 # Function to log messages
 log_message() {
-    local message=$1
+    local message$1
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $message" >> setup.log
 }
 
@@ -123,17 +123,17 @@ update_and_install() {
 # Configure Git
 configure_git() {
     print_message "$YELLOW" "Please enter your GitHub username or press enter to continue."
-    read -p 'GitHub Username: ' GIT_USER
+    read -p 'GitHub Username: ' git_user
     print_message "$YELLOW" "Please enter your GitHub email or press enter to continue."
-    read -p 'GitHub Email: ' GIT_EMAIL
+    read -p 'GitHub Email: ' git_email
 
-    if [[ -n "${GIT_USER}" ]]; then
-        git config --global user.name "${GIT_USER}"
-        log_message "Configured Git username: ${GIT_USER}"
+    if [[ -n "${git_user}" ]]; then
+        git config --global user.name "${git_user}"
+        log_message "Configured Git username: ${git_user}"
     fi
-    if [[ -n "${GIT_EMAIL}" ]]; then
-        git config --global user.email "${GIT_EMAIL}"
-        log_message "Configured Git email: ${GIT_EMAIL}"
+    if [[ -n "${git_email}" ]]; then
+        git config --global user.email "${git_email}"
+        log_message "Configured Git email: ${git_email}"
     fi
 }
 
