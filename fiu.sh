@@ -219,7 +219,7 @@ configure_bash() {
     log_message "Configuring bash aliases and .bashrc"
 
     local aliases_file=~/.bash_aliases
-    local aliases_list_file="aliases-added.txt"
+    local aliases_list_file="aliases-added.log"
 
     # Function to add an alias
     add_alias() {
