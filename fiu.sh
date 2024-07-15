@@ -324,7 +324,7 @@ Allowed:
 
 A detailed log of all operations can be found in setup.log
 "
-    log_message "
+    echo "
 ##############################################
 #               Overview Section             #
 ##############################################
@@ -348,7 +348,7 @@ Allowed:
 8. Created aliases and added them to .bash_aliases
 9. Created a list of aliases in aliases-added.txt
 
-A detailed log of all operations can be found in setup.log"
+A detailed log of all operations can be found in setup.log" >> setup.log
     read -p "PRESS ANY KEY TO REBOOT"
     log_message "System reboot initiated by user"
     sudo reboot now
