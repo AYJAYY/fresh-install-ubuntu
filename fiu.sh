@@ -31,14 +31,14 @@ declare git_email
 
 # Function to print colored messages
 print_message() {
-    local color$1
-    local message$2
+    local color=$1
+    local message=$2
     echo -e "${color}${message}${NC}"
 }
 
 # Function to log messages
 log_message() {
-    local message$1
+    local message=$1
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $message" >> setup.log
 }
 
