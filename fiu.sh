@@ -324,7 +324,31 @@ Allowed:
 
 A detailed log of all operations can be found in setup.log
 "
-    log_message "Setup completed successfully"
+    log_message "
+##############################################
+#               Overview Section             #
+##############################################
+Description of what was done:
+1. Ensured a non-root user is set up.
+2. Ensured non-root user has sudo permission.
+3. Installed Updates, Aliases & Standard Software.
+4. Ensured SSH is allowed.
+5. Ensured ufw firewall is enabled. 
+Allowed:
+   a. SSH (22)
+   b. HTTP (80)
+   c. Cockpit (9090)
+   d. Samba
+6. Locked down SSH.
+   a. Set SSH not to display banner
+   b. Disabled all forwarding
+   c. Disabled root login over SSH
+   d. Ignoring rhosts
+7. Installed fail2ban and configured it to protect SSH.
+8. Created aliases and added them to .bash_aliases
+9. Created a list of aliases in aliases-added.txt
+
+A detailed log of all operations can be found in setup.log"
     read -p "PRESS ANY KEY TO REBOOT"
     log_message "System reboot initiated by user"
     sudo reboot now
