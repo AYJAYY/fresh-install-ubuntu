@@ -4,9 +4,9 @@
 #      File: fiu.sh                             #
 #      Author: AYJAYY                           #
 #      Creation Date: 7/7/2024                  #
-#      Modified Date: 7/13/2024                 #
+#      Modified Date: 7/15/2024                 #
 #      License: GPL v3                          #
-#      Version: 0.3.0                           #
+#      Version: 0.3.1                           #
 #      Status: Development                      #
 #      Fork Of: first-ten-seconds-redhat-ubuntu #
 #      Origina Author: TedLeRoy                 #
