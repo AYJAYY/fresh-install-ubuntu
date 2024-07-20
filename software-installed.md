@@ -3,9 +3,6 @@
 - bwm-ng
 - cockpit
 - curl
-- deluged
-- deluge-console
-- deluge-web
 - ecryptfs-utils
 - fail2ban
 - flatpak
