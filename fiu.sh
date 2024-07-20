@@ -89,7 +89,7 @@ else
 ##############################################
 #      This script is intended for           #
 #      Ubuntu-based systems only.            #
-#      Exiting Now                           #
+#      Exiting Now!                          #
 ##############################################
 "
     log_message "Non-Ubuntu system detected. Script execution aborted."
