@@ -4,7 +4,7 @@
 #      File: fiu.sh                             #
 #      Author: AYJAYY                           #
 #      Creation Date: 7/7/2024                  #
-#      Modified Date: 7/15/2024                 #
+#      Modified Date: 7/20/2024                 #
 #      License: GPL v3                          #
 #      Version: 0.3.1                           #
 #      Status: Development                      #
@@ -101,16 +101,18 @@ update_and_install() {
     sudo snap refresh
 
     local packages=(
-        btop build-essential bwm-ng cockpit curl ecryptfs-utils fail2ban flatpak gettext
-        git-all googler gparted htop iftop iotop libcurl4-gnutls-dev libexpat1-dev libssl-dev
-        libz-dev net-tools nmap openssh-client openssh-server p7zip-full p7zip-rar python3
-        python3-pip samba speedtest-cli ssh sysstat thefuck transmission-cli unrar unattended-upgrades vnstat yt-dlp
+        btop build-essential bwm-ng cockpit curl deluge-web deluged deluge-console ecryptfs-utils fail2ban 
+        flatpak gettext git-all googler gparted htop iftop iotop libcurl4-gnutls-dev libexpat1-dev libssl-dev
+        libz-dev net-tools nmap openssh-client openssh-server p7zip-full p7zip-rar python3 python3-pip 
+        samba software-properties-common speedtest-cli ssh sysstat thefuck transmission-cli unrar 
+        unattended-upgrades vnstat yt-dlp
     )
 
     sudo apt-get -y install "${packages[@]}"
 
     # Add and install additional repositories
     sudo add-apt-repository ppa:zhangsongcui3371/fastfetch -y
+    sudo add-apt-repository ppa:deluge-team/stable -y
     sudo apt-get update
     sudo apt-get -y install fastfetch
 
