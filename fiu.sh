@@ -122,9 +122,8 @@ update_and_install() {
 
     # Add and install additional repositories
     sudo add-apt-repository ppa:zhangsongcui3371/fastfetch -y
-    sudo add-apt-repository ppa:deluge-team/stable -y
     sudo apt-get update
-    sudo apt-get -y install fastfetch deluge-web deluged deluge-console
+    sudo apt-get -y install fastfetch
 
     print_message "$GREEN" "Completed Updates & Installs."
     log_message "Completed system update and package installation"
