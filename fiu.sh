@@ -112,11 +112,10 @@ update_and_install() {
     sudo snap refresh
 
     local packages=(
-        btop build-essential bwm-ng cockpit curl deluge-web deluged deluge-console ecryptfs-utils fail2ban 
-        flatpak gettext git-all googler gparted htop iftop iotop libcurl4-gnutls-dev libexpat1-dev libssl-dev
-        libz-dev net-tools nmap openssh-client openssh-server p7zip-full p7zip-rar python3 python3-pip 
-        samba software-properties-common speedtest-cli ssh sysstat thefuck transmission-cli unrar 
-        unattended-upgrades vnstat yt-dlp
+        btop build-essential bwm-ng cockpit curl ecryptfs-utils fail2ban flatpak gettext git-all googler 
+        gparted htop iftop iotop libcurl4-gnutls-dev libexpat1-dev libssl-dev libz-dev net-tools nmap 
+        openssh-client openssh-server p7zip-full p7zip-rar python3 python3-pip samba software-properties-common 
+        speedtest-cli ssh sysstat thefuck transmission-cli unrar unattended-upgrades vnstat yt-dlp
     )
 
     sudo apt-get -y install "${packages[@]}"
@@ -125,7 +124,7 @@ update_and_install() {
     sudo add-apt-repository ppa:zhangsongcui3371/fastfetch -y
     sudo add-apt-repository ppa:deluge-team/stable -y
     sudo apt-get update
-    sudo apt-get -y install fastfetch
+    sudo apt-get -y install fastfetch deluge-web deluged deluge-console
 
     print_message "$GREEN" "Completed Updates & Installs."
     log_message "Completed system update and package installation"
