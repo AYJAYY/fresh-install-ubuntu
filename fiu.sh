@@ -77,10 +77,21 @@ check_ubuntu() {
 
     
 if check_ubuntu; then
-    print_message "$GREEN" "Ubuntu-based system detected. Proceeding with setup..."
+    print_message "$GREEN" "
+##############################################
+#      Ubuntu-based system detected.         #
+#      Proceeding with setup...              #
+##############################################
+"
     log_message "Ubuntu-based system detected. Proceeding with setup."
 else
-    print_message "$RED" "This script is intended for Ubuntu-based systems only. Exiting."
+    print_message "$RED" "
+##############################################
+#      This script is intended for           #
+#      Ubuntu-based systems only.            #
+#      Exiting Now                           #
+##############################################
+"
     log_message "Non-Ubuntu system detected. Script execution aborted."
     exit 1
 fi
