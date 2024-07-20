@@ -43,7 +43,7 @@ This bash script is designed to automate the process of setting up and securing 
 
 ### Firewall Setup
 - Enables and configures UFW (Uncomplicated Firewall)
-- Opens specific ports (HTTP, Samba, SSH, 9090)
+- Opens specific ports (HTTP, Samba, SSH, 9090, 8112)
 
 ### fail2ban Installation and Configuration
 - Installs and configures fail2ban for SSH protection
