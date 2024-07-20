@@ -194,6 +194,7 @@ configure_ufw_and_fail2ban() {
     sudo ufw allow ssh
     sudo ufw allow samba
     sudo ufw allow 9090
+    sudo ufw allow 8112
     sudo ufw --force enable
 
     print_message "$GREEN" "Done configuring ufw firewall."
@@ -324,7 +325,8 @@ Allowed:
    a. SSH (22)
    b. HTTP (80)
    c. Cockpit (9090)
-   d. Samba
+   d. Deluge-Web (8112)
+   e. Samba
 6. Locked down SSH.
    a. Set SSH not to display banner
    b. Disabled all forwarding
@@ -350,7 +352,8 @@ Allowed:
    a. SSH (22)
    b. HTTP (80)
    c. Cockpit (9090)
-   d. Samba
+   d. Deluge-Web (8112)
+   e. Samba
 6. Locked down SSH.
    a. Set SSH not to display banner
    b. Disabled all forwarding
