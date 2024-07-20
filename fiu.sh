@@ -6,7 +6,7 @@
 #      Creation Date: 7/7/2024                  #
 #      Modified Date: 7/20/2024                 #
 #      License: GPL v3                          #
-#      Version: 0.3.2                           #
+#      Version: 0.3.3                           #
 #      Status: Development                      #
 #      Fork Of: first-ten-seconds-redhat-ubuntu #
 #      Origina Author: TedLeRoy                 #
