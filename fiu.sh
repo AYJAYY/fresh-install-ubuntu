@@ -157,7 +157,7 @@ configure_ssh() {
 "
     log_message "Configuring SSH"
 
-    sudo tee /etc/ssh/sshd_config.d/fresh-install.conf >/dev/null <<EOF
+    sudo tee /etc/ssh/sshd_config.d/fresh-install-ubuntu-script.conf >/dev/null <<EOF
 DebianBanner no
 DisableForwarding yes
 PermitRootLogin no
