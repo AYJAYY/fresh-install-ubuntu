@@ -63,7 +63,7 @@ This bash script is designed to automate the process of setting up and securing 
 
 ## Security Measures
 - Enforces non-root user usage
-- Secures SSH configuration
+- Secures SSH configuration (Also Disables Password Login)
 - Enables and configures firewall
 - Implements fail2ban for brute-force protection
 
