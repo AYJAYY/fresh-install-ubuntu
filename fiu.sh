@@ -162,6 +162,7 @@ DebianBanner no
 DisableForwarding yes
 PermitRootLogin no
 IgnoreRhosts yes
+PasswordAuthentication no
 EOF
 
     if pgrep -x "sshd" >/dev/null; then
